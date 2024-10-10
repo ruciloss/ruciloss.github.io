@@ -1,0 +1,31 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --cc-btn-primary-bg: theme('colors.blue.700') !important;
+    --cc-btn-primary-hover-bg: theme('colors.blue.600') !important;
+}
+
+.cc--darkmode {
+    --cc-btn-primary-bg: theme('colors.blue.700') !important;
+    --cc-btn-primary-hover-bg: theme('colors.blue.600') !important;
+}
+
+.pm__title {
+  display: unset !important;
+}
+
+.pm__title small {
+    display: block;
+    margin-top: .5em;
+    font-weight: 400;
+}
+
+.pm__section-desc p {
+    display: block !important;
+}
+
+.pm-overlay {
+    backdrop-filter: blur(3px) !important;
+}

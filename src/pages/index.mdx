@@ -1,0 +1,68 @@
+import ProjectCard from '../components/ProjectCard';
+import SocialIcon from '../components/SocialIcon';
+
+            <div className="mt-16 mb-8 text-center">
+                <h1 className="mb-12 text-6xl md:text-7xl font-bold leading-loose tracking-tight _text-slate-900 dark:_text-slate-100">
+					<div>Če<span className='text-blue-700'>šti</span><span className='text-red-600'>ny</span> do <br /> populárních her</div>
+                </h1>
+                
+                <div className="flex justify-center items-center space-x-4">
+                    <div className="mt-0 font-semibold tracking-tight text-3xl _text-slate-900 dark:_text-slate-100">
+                        ..by Ru<span className='text-blue-700'>cil</span><span className='text-red-600'>oss</span>
+                    </div>
+                    <SocialIcon url="https://www.instagram.com/ruciloss/" />
+                    <SocialIcon url="https://www.youtube.com/@ruciloss" />
+                    <SocialIcon url="https://www.twitch.tv/ruciloss" />
+                </div>
+
+                <div className="container mx-auto mt-16 sm:mt-36">
+                    <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                    <ProjectCard
+                        videoId="Jk6w7aiJ0v8"
+                        title="Frostpunk 2"
+                        description="Neoficiální strojový překlad."
+                        downloadUrl="https://github.com/ruciloss/frostpunk2-cestina/releases/download/v1.0/Frostpunk2_CZ_1.0.exe"
+                        version="1.0"
+                        releaseDate="20.9.2024"
+                        packageStatsUrl="https://api.github.com/repos/ruciloss/frostpunk2-cestina/releases"
+                        bulletPoints={[
+                            "Kompletní překlad",
+                            "Základní oprava chyb",
+                            "Základní korekce",
+                            "Otestováno"
+                        ]}
+                    />
+                    <ProjectCard
+                        videoId="0QI8lIuHoho"
+                        title="Memoriapolis"
+                        description="Neoficiální strojový překlad."
+                        downloadUrl="https://github.com/ruciloss/memoriapolis-cestina/releases/download/v1.0/Memoriapolis_CZ_1.0.exe"
+                        version="1.0"
+                        releaseDate="24.9.2024"
+                        packageStatsUrl="https://api.github.com/repos/ruciloss/memoriapolis-cestina/releases"
+                        bulletPoints={[
+                            "Kompletní překlad",
+                            "Základní oprava chyb",
+                            "Základní korekce",
+                            "Otestováno"
+                        ]}
+                    />
+                    <ProjectCard
+                        videoId="LJqmpGHdH_A"
+                        title="Tiny Glade"
+                        description="Neoficiální ruční překlad."
+                        downloadUrl="https://github.com/ruciloss/tinyglade-cestina/releases/download/v1.0/TinyGlade_CZ_1.0.exe"
+                        version="1.0"
+                        releaseDate="30.9.2024"
+                        packageStatsUrl="https://api.github.com/repos/ruciloss/tinyglade-cestina/releases"
+                        bulletPoints={[
+                            "Kompletní překlad",
+                            "Základní oprava chyb",
+                            "Základní korekce",
+                            "Otestováno"
+                        ]}
+                    />
+                    </div>
+                </div>
+            </div>
+        
