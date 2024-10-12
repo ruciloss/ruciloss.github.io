@@ -15,9 +15,5 @@ export default {
 			toc: true,
 			pagination: false
 		  }
-	},
-	docs: {
-		title: 'Dokumentace',
-		type: 'page'
 	}
 }
