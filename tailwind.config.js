@@ -5,7 +5,6 @@ module.exports = {
         './src/components/**/*.{js,jsx,ts,tsx,md,mdx}'
     ],
     darkMode: 'selector',
-    important: "#__next",
     theme: {
       	extend: {},
     },

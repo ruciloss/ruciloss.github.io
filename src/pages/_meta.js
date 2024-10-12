@@ -16,4 +16,8 @@ export default {
 			pagination: false
 		  }
 	},
+	docs: {
+		title: 'Dokumentace',
+		type: 'page'
+	}
 }
