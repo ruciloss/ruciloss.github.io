@@ -51,7 +51,7 @@ export default ({
 							href={downloadUrl}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="rounded px-4 py-2 text-sm mt-4 md:mt-0 font-medium bg-blue-700 hover:bg-blue-600 text-white dark:text-neutral-900 transition duration-300 ease-in-out flex items-center justify-center whitespace-nowrap w-full"
+							className="rounded px-4 py-2 text-sm mt-4 md:mt-0 font-medium bg-blue-700 hover:bg-blue-600 text-white transition duration-300 ease-in-out flex items-center justify-center whitespace-nowrap w-full"
 						>
                             <FaWindows className="mr-2" /> 
 							Stáhnout češtinu

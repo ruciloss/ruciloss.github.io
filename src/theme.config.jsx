@@ -1,8 +1,6 @@
-import { useRouter } from 'next/router'
-import { useConfig } from 'nextra-theme-docs'
-import Footer from './components/Footer';
-import Logo from './components/Logo'; 
-import Head from './components/Head'; 
+import Footer from './components/Layout/Footer';
+import Logo from './components/Content/Logo'; 
+import Head from './components/Core/Head'; 
 
 const logo = <Logo />;
 
@@ -46,10 +44,10 @@ export default {
 	logo,
 	search: {
 		placeholder: 'Najdi cokoliv...',
-		//loading: 'Načítání..',
-		//error: 'Error',
-		//emptyResult: 'Nic nebylo nalezeno.',
-		component: null
+		loading: 'Načítání..',
+		error: 'Error',
+		emptyResult: 'Nic nebylo nalezeno.',
+		//component: null
   	},
 	project: {
 		//link: 'https://github.com/ruciloss/ruciloss.github.io/'

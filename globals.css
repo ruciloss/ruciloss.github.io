@@ -10,6 +10,8 @@
 .cc--darkmode {
     --cc-btn-primary-bg: theme('colors.blue.700') !important;
     --cc-btn-primary-hover-bg: theme('colors.blue.600') !important;
+    --cc-btn-primary-color: theme('colors.white') !important;
+    --cc-btn-primary-hover-color: theme('colors.white') !important;
 }
 
 .pm__title {
@@ -27,5 +29,5 @@
 }
 
 .pm-overlay {
-    backdrop-filter: blur(3px) !important;
+    backdrop-filter: blur(6px) !important;
 }

@@ -1,6 +1,6 @@
 import '../../globals.css';
-import CookieConsent from '../components/CookieConsent';
-import GoogleAnalytics from '../components/GoogleAnalytics';
+import CookieConsent from '../components/ThirdParty/CookieConsent';
+import GoogleAnalytics from '../components/ThirdParty/GoogleAnalytics';
 
 export default function App({ Component, pageProps }) {
 	return (

@@ -7,7 +7,7 @@ export default function CookieConsentComponent() {
         CookieConsent.run({
             autoShow: true,
             cookie: {
-                name: '_jr',
+                name: '_' + location.hostname,
             },
             guiOptions: {
                 consentModal: {

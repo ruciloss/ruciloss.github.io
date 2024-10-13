@@ -3,35 +3,35 @@ import { FaInstagram, FaTwitch, FaTwitter, FaFacebook, FaLinkedin, FaYoutube, Fa
 
 const socialPlatforms = {
     instagram: {
-        icon: <FaInstagram size={30} />,
+        icon: <FaInstagram size={20} />,
         domain: 'instagram.com',
     },
     twitch: {
-        icon: <FaTwitch size={30} />,
+        icon: <FaTwitch size={20} />,
         domain: 'twitch.tv',
     },
     twitter: {
-        icon: <FaTwitter size={30} />,
+        icon: <FaTwitter size={20} />,
         domain: 'twitter.com',
     },
     facebook: {
-        icon: <FaFacebook size={30} />,
+        icon: <FaFacebook size={20} />,
         domain: 'facebook.com',
     },
     linkedin: {
-        icon: <FaLinkedin size={30} />,
+        icon: <FaLinkedin size={20} />,
         domain: 'linkedin.com',
     },
     youtube: {
-        icon: <FaYoutube size={30} />,
+        icon: <FaYoutube size={20} />,
         domain: 'youtube.com',
     },
     discord: {
-        icon: <FaDiscord size={30} />,
+        icon: <FaDiscord size={20} />,
         domain: 'discord.com',
     },
     github: {
-        icon: <FaGithub size={30} />,
+        icon: <FaGithub size={20} />,
         domain: 'github.com',
     },
 };
@@ -50,7 +50,7 @@ export default function SocialIcon({ url }) {
         icon && (
             <a 
                 href={url} 
-                className="flex items-center transition-colors duration-300 text-slate-900 dark:text-slate-100 hover:text-blue-700" 
+                className="flex items-center transition-colors duration-200 text-slate-900 dark:text-slate-100 hover:text-blue-700" 
                 target="_blank" 
                 rel="noopener noreferrer"
             >

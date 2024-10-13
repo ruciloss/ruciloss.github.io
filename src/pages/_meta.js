@@ -14,6 +14,6 @@ export default {
 			sidebar: false,
 			toc: true,
 			pagination: false
-		  }
+		}
 	}
 }
