@@ -42,7 +42,7 @@ export default ({
                         <p className="font-medium text-2xl tracking-tight text-slate-900 dark:text-slate-100 text-left">
                             {title}
                         </p>
-                        <p className="text-gray-400 text-left">{description}</p>
+                        <p className="text-gray-500 dark:text-gray-400 text-left">{description}</p>
                     </div>
                     <div>
                         <a
@@ -54,7 +54,7 @@ export default ({
                             <FaWindows className="mr-2" />
                             Stáhnout češtinu
                         </a>
-                        <span className="text-sm text-right text-gray-400 dark:text-gray-600">
+                        <span className="text-sm text-right text-gray-500 dark:text-gray-400">
                             v{version}
                         </span>
                     </div>
