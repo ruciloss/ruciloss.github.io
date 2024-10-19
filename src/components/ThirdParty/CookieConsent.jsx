@@ -105,11 +105,13 @@ export default function CookieConsentComponent() {
                                         ],
                                     },
                                 },
+                                /*
                                 {
                                     title: 'Cílení a reklama',
                                     description: 'Tyto cookies se používají k tomu, aby byly reklamní zprávy pro vás a vaše zájmy relevantnější. Cílem je zobrazit reklamy, které jsou pro jednotlivé uživatele relevantní a atraktivní, a tím pádem hodnotnější pro vydavatele a třetí strany.',
                                     linkedCategory: 'ads',
                                 },
+                                */
                                 {
                                     title: 'Podrobnosti o souhlasu',
                                     description: `
