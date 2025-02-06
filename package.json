@@ -1,12 +1,4 @@
 {
-    "keywords": [
-        "next.js",
-        "react",
-        "tailwindcss",
-        "eslint",
-        "postcss",
-        "web-development"
-    ],
 	"scripts": {
 		"build": "next build",
 		"dev": "next",

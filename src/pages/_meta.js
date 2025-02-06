@@ -1,19 +1,37 @@
 export default {
 	index: {
-		title: 'Češtiny a překlady do videoher',
+		title: ' ',
 		type: 'page',
 		theme: {
-			layout: 'full'
+			layout: 'full',
+			breadcrumb: true,
+			footer: true,
+			navbar: true,
+			pagination: true,
+			sidebar: true,
+			toc: true
 		}
 	},
-	privacy: {
-		title: 'Soukromí',
-		theme: {
-			breadcrumb: false,
-			footer: true,
-			sidebar: false,
-			toc: true,
-			pagination: false
-		}
-	}
+	docs: {
+		type: 'page',
+		title: 'Documentation',
+		href: '/get-started'
+	},
+	'#': {
+		type: 'separator',
+		title: 'Get Started' 
+	},
+	'get-started': 'Installation',
+	'##': {
+		type: 'separator',
+		title: 'Projects'
+	},
+	'bootstrap-theme-toggler': 'Bootstrap Theme Toggler',
+	sliderjs: 'SliderJS',
+	'###': {
+		type: 'separator',
+		title: 'Resources'
+	},
+	license: 'License',
+	legal: 'Legal'
 }

@@ -1,0 +1,32 @@
+# Configuration
+
+You can customize the toggler using the following parameters:
+
+```js filename="example.js"
+BootstrapThemeToggler.run({
+    root: '#theme-toggler-container', 
+    i18n: {
+        default: 'en', 
+        translations: {
+            cs: {
+                system: 'Systém',
+                light: 'Světlý',
+                dark: 'Tmavý'
+            }
+        }
+    },
+    classes: {
+        container: 'custom-container-class',
+        button: 'custom-button-class',
+        menu: 'custom-menu-class'
+    },
+    storage: {
+        type: 'local', 
+        expiration: 3600000,
+        encryption: {
+            enabled: true,
+            method: 'base64' 
+        }
+    }
+});
+```

@@ -49,80 +49,80 @@ export default function CookieConsentComponent() {
                 ads: {},
             },
             language: {
-                default: 'cs',
+                default: 'en',
                 translations: {
-                    cs: {
+                    en: {
                         consentModal: {
-                            title: 'Cookies',
-                            description: 'Používám cookies, abych vylepšil vaše procházení a analyzoval návštěvnost stránek. Cookies mi pomáhají poskytovat personalizovaný obsah a zlepšovat funkčnost webu.',
-                            acceptAllBtn: 'Přijmout vše',
-                            acceptNecessaryBtn: 'Odmítnout vše',
-                            showPreferencesBtn: 'Spravovat preference',
-                            closeIconLabel: 'Odmítnout vše a zavřít modal',
+                            title: '🍪 Cookies',
+                            description: 'We use cookies to enhance your browsing experience and analyze website traffic. Cookies help us provide personalized content and improve the functionality of the website.',
+                            acceptAllBtn: 'Accept All',
+                            acceptNecessaryBtn: 'Reject All',
+                            showPreferencesBtn: 'Manage Preferences',
+                            closeIconLabel: 'Reject All and Close Modal',
                         },
                         preferencesModal: {
-                            title: 'Nastavení cookies <small>' + window.location.hostname + '</small>',
-                            acceptAllBtn: 'Přijmout vše',
-                            acceptNecessaryBtn: 'Odmítnout vše',
-                            savePreferencesBtn: 'Uložit výběr',
-                            closeIconLabel: 'Zavřít modal',
-                            serviceCounterLabel: 'Služba|Služby',
+                            title: 'Cookie Settings <small>' + window.location.hostname + '</small>',
+                            acceptAllBtn: 'Accept All',
+                            acceptNecessaryBtn: 'Reject All',
+                            savePreferencesBtn: 'Save Selection',
+                            closeIconLabel: 'Close Modal',
+                            serviceCounterLabel: 'Service|Services',
                             sections: [
                                 {
-                                    title: 'Vaše volby ohledně soukromí',
-                                    description: `V tomto panelu můžete vyjádřit své preference týkající se zpracování vašich osobních údajů. Můžete kdykoli přezkoumat a změnit vyjádřené volby tím, že znovu otevřete tento panel pomocí poskytnutého odkazu. Pro odmítnutí vašeho souhlasu s konkrétními zpracovatelskými činnostmi popsanými níže přepněte přepínače na vypnuto nebo použijte tlačítko „Odmítnout vše“ a potvrďte, že chcete uložit své volby.`,
+                                    title: 'Your Privacy Choices',
+                                    description: `In this panel, you can express your preferences regarding the processing of your personal data. You can review and change the choices you’ve expressed at any time by reopening this panel via the provided link. To refuse your consent for specific processing activities described below, toggle the switches to off or use the "Reject All" button and confirm your preferences.`,
                                 },
                                 {
-                                    title: 'Striktně nezbytné',
-                                    description: 'Tyto cookies jsou nezbytné pro správné fungování webové stránky a nelze je vypnout.',
+                                    title: 'Strictly Necessary',
+                                    description: 'These cookies are essential for the proper functioning of the website and cannot be disabled.',
                                     linkedCategory: 'necessary',
                                 },
                                 {
-                                    title: 'Výkon a analýza',
-                                    description: 'Tyto cookies shromažďují informace o tom, jak používáte naši webovou stránku. Všechna data jsou anonymizována a nelze je použít k identifikaci.',
+                                    title: 'Performance and Analytics',
+                                    description: 'These cookies collect information about how you use our website. All data is anonymized and cannot be used to identify you.',
                                     linkedCategory: 'analytics',
                                     cookieTable: {
-                                        caption: 'Tabulka cookies',
+                                        caption: 'Cookie Table',
                                         headers: {
                                             name: 'Cookie',
-                                            domain: 'Doména',
-                                            desc: 'Popis',
-                                            expiration: 'Expirace',
+                                            domain: 'Domain',
+                                            desc: 'Description',
+                                            expiration: 'Expiration',
                                         },
                                         body: [
                                             {
                                                 name: '_ga',
                                                 domain: 'Google Analytics',
-                                                desc: 'Cookie nastavené <a href="https://analytics.google.com">Google Analytics</a>.',
-                                                expiration: 'Vyprší po 12 dnech'
+                                                desc: 'Cookie set by <a href="https://analytics.google.com">Google Analytics</a>.',
+                                                expiration: 'Expires after 12 days',
                                             },
                                             {
                                                 name: '_gid',
                                                 domain: 'Google Analytics',
-                                                desc: 'Cookie nastavené <a href="https://analytics.google.com">Google Analytics</a>',
-                                                expiration: 'Relace'
+                                                desc: 'Cookie set by <a href="https://analytics.google.com">Google Analytics</a>.',
+                                                expiration: 'Session',
                                             },
                                         ],
                                     },
                                 },
                                 /*
                                 {
-                                    title: 'Cílení a reklama',
-                                    description: 'Tyto cookies se používají k tomu, aby byly reklamní zprávy pro vás a vaše zájmy relevantnější. Cílem je zobrazit reklamy, které jsou pro jednotlivé uživatele relevantní a atraktivní, a tím pádem hodnotnější pro vydavatele a třetí strany.',
+                                    title: 'Targeting and Advertising',
+                                    description: 'These cookies are used to make advertising messages more relevant to you and your interests. The goal is to display ads that are relevant and attractive to individual users, thus more valuable for publishers and third parties.',
                                     linkedCategory: 'ads',
                                 },
                                 */
                                 {
-                                    title: 'Podrobnosti o souhlasu',
+                                    title: 'Consent Details',
                                     description: `
-                                        <p><strong>ID souhlasu:</strong> <span id="consent-id">-</span></p>
-                                        <p><strong>Datum souhlasu:</strong> <span id="consent-timestamp">-</span></p>
-                                        <p><strong>Poslední aktualizace:</strong> <span id="last-consent-timestamp">-</span></p>
+                                        <p><strong>Consent ID:</strong> <span id="consent-id">-</span></p>
+                                        <p><strong>Consent Date:</strong> <span id="consent-timestamp">-</span></p>
+                                        <p><strong>Last Updated:</strong> <span id="last-consent-timestamp">-</span></p>
                                     `
                                 },
                                 {
-                                    title: 'Více informací',
-                                    description: 'Pokud máte jakékoli dotazy týkající se mé politiky o cookies a vašich volbách, prosím <a href="#contact-page">kontaktujte nás</a>',
+                                    title: 'More Information',
+                                    description: 'If you have any questions about our cookie policy and your preferences, please <a href="#contact-page">contact us</a>.',
                                 },
                             ],
                         },
@@ -152,7 +152,7 @@ export default function CookieConsentComponent() {
         });
     
         const linkElement = document.createElement("button");
-        linkElement.textContent = "Nastavení soukromí";
+        linkElement.textContent = "Privacy Settings";
         linkElement.setAttribute('type', 'button');
         linkElement.classList.add('hover:text-blue-700');
         linkElement.onclick = (event) => {

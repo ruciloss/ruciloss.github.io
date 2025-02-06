@@ -26,44 +26,21 @@ export default {
 			<Footer />
 		)
 	},
-  	themeSwitch: {
-		useOptions() {
-			return {
-				light: 'Světlý',
-				dark: 'Tmavý',
-				system: 'Systém'
-			}
-		}
-	},
-	//docsRepositoryBase: 'https://github.com/ruciloss/ruciloss.github.io/tree/main/docs',
+	docsRepositoryBase: 'https://github.com/ruciloss/ruciloss.github.io/tree/main/docs',
 	darkMode: true,
 	color: {
 		hue: 212,
 		saturation: 100
 	},
 	logo,
-	search: {
-		placeholder: 'Najdi cokoliv...',
-		loading: 'Načítání..',
-		error: 'Error',
-		emptyResult: 'Nic nebylo nalezeno.',
-		//component: null
-  	},
 	project: {
-		//link: 'https://github.com/ruciloss/ruciloss.github.io/'
+		link: 'https://github.com/ruciloss/ruciloss.github.io/'
   	},
 	chat: {
 		//link: 'https://discord.gg/hEM84NMkRv'
 	},
 	toc: {
-		title: 'Na této stránce',
 		backToTop: true
-	},
-	editLink: {
-		component: null
-	},
-	feedback: {
-		content: null
 	},
 	sidebar: {
 		//defaultMenuCollapseLevel: 2,
