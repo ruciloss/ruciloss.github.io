@@ -18,6 +18,7 @@
     },
     "dependencies": {
         "@babel/core": "^7.26.10",
+        "@next/font": "^14.2.15",
         "@stylexjs/open-props": "0.11.1",
         "@stylexjs/stylex": "0.12.0",
         "next": "14.2.21",
@@ -25,6 +26,7 @@
         "react": "^18.3.0",
         "react-dom": "^18.3.0",
         "styled-jsx": "^5.1.1",
+        "vanilla-cookieconsent": "^3.1.0",
         "webpack": "^5.99.7"
     },
     "devDependencies": {

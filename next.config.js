@@ -1,8 +1,7 @@
-/** @type {import('next').NextConfig} */
-
+// @type {import('next').NextConfig}
 const path = require("path");
 
-module.exports = {
+const nextConfig = {
     // Static export
     output: "export",
 
@@ -21,13 +20,13 @@ module.exports = {
         ],
     },
 
-    // i18n
+    // i18n (zakomentováno dle původního nastavení)
     /*
-    i18n: {
-        locales: ['en', 'cs'],
-        defaultLocale: 'en',
-    },
-    */
+  i18n: {
+    locales: ['en', 'cs'],
+    defaultLocale: 'en',
+  },
+  */
 
     // Hides the "X-Powered-By: Next.js" header
     poweredByHeader: false,
@@ -35,8 +34,8 @@ module.exports = {
     // StyleX
     transpilePackages: ["@stylexjs/open-props"],
     eslint: { ignoreDuringBuilds: true },
+
     webpack: (config, { dev, isServer }) => {
-        // Process only files that require StyleX compilation using babel-loader
         config.module.rules.push({
             test: /\.(js|jsx|ts|tsx)$/,
             exclude: /node_modules(?!\/@stylexjs\/open-props)/,
@@ -71,3 +70,5 @@ module.exports = {
         return config;
     },
 };
+
+module.exports = nextConfig;

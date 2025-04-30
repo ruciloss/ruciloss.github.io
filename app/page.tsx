@@ -1,23 +1,48 @@
 import Image from "next/image";
+import * as stylex from "@stylexjs/stylex";
 
-export default function Home() {
+const styles = stylex.create({
+    container: {
+        display: "flex",
+        flexDirection: "column", // Zajistí, že vše bude ve sloupci (na novém řádku)
+        justifyContent: "center", // Vertikální vycentrování
+        alignItems: "center", // Horizontální vycentrování
+        height: "100vh", // Výška na 100% viewportu
+        textAlign: "center", // Uprostřed textu
+    },
+    logo: {
+        width: "150px", // Šířka loga
+        height: "auto", // Automatická výška (pro zachování proporcí)
+        marginBottom: "20px", // Mezera pod logem
+    },
+    heading: {
+        fontSize: "32px", // Velikost nadpisu
+        fontWeight: "bold", // Tučný text
+        marginBottom: "10px", // Mezera pod nadpisem
+    },
+    paragraph: {
+        fontSize: "16px", // Velikost textu
+        color: "#333", // Barva textu
+    },
+});
+
+export default function Navbar() {
     return (
-        <div>
-            Domovská stránka
+        <div {...stylex.props(styles.container)}>
             <Image
+                {...stylex.props(styles.logo)}
                 src="/next.svg"
-                alt="Next.js logo"
+                alt="Logo"
                 width={180}
                 height={38}
                 priority
             />
-            <a
-                href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Link
-            </a>
+
+            <h1 {...stylex.props(styles.heading)}>Welcome to MySite</h1>
+
+            <p {...stylex.props(styles.paragraph)}>
+                This is a simple website built with Next.js and StyleX.
+            </p>
         </div>
     );
 }

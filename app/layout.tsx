@@ -3,9 +3,16 @@ import type { Metadata } from "next";
 
 // Components
 import SelfXSSWarning from "@/components/SelfXSSWarning";
+import CookieConsent from "@/components/CookieConsent";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 // Fonts
 import { Inter } from "next/font/google";
+
+const inter = Inter({
+    weight: '400',
+    subsets: ['latin'],
+});
 
 // Styles
 import "./app.css";
@@ -23,7 +30,7 @@ const styles = stylex.create({
         padding: 0,
     },
     body: {
-        fontFamily: "'Inter', sans-serif",
+        fontFamily: `var(--font-inter), sans-serif`,
         color: {
             default: "red",
             [DARK]: "blue",
@@ -54,8 +61,12 @@ export default function RootLayout({
             {...stylex.props(styles.html, styles.reset)}
         >
             <body {...stylex.props(styles.reset, styles.body)}>
-                {children}
-                <SelfXSSWarning />
+                <main className={inter.className}>
+                    {children}
+                    <GoogleAnalytics id="G-ABCDEF1234" />
+                    <CookieConsent />
+                    <SelfXSSWarning />
+                </main>
             </body>
         </html>
     );
