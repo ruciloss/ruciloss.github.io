@@ -76,6 +76,6 @@ module.exports = {
             },
             useCSSLayers: true,
         },
-        autoprefixer: {},
+autoprefixer: {},
     },
 };
