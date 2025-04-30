@@ -17,36 +17,36 @@
         ]
     },
     "dependencies": {
-        "@babel/core": "^7.26.10",
+        "@babel/core": "^7.27.1",
         "@next/font": "^14.2.15",
         "@stylexjs/open-props": "0.11.1",
         "@stylexjs/stylex": "0.12.0",
-        "next": "14.2.21",
+        "next": "14.2.28",
         "postcss": "^8.5.3",
-        "react": "^18.3.0",
-        "react-dom": "^18.3.0",
-        "styled-jsx": "^5.1.1",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "styled-jsx": "^5.1.7",
         "vanilla-cookieconsent": "^3.1.0",
         "webpack": "^5.99.7"
     },
     "devDependencies": {
         "@stylexjs/eslint-plugin": "0.12.0",
         "@stylexjs/postcss-plugin": "0.12.0",
-        "@types/babel__core": "^7",
+        "@types/babel__core": "^7.20.5",
         "@types/json-schema": "^7.0.15",
-        "@types/node": "^22.7.6",
-        "@types/react": "^18.3.0",
-        "@types/react-dom": "^18.3.0",
+        "@types/node": "^22.15.3",
+        "@types/react": "^18.3.20",
+        "@types/react-dom": "^18.3.7",
         "@typescript-eslint/parser": "^6.21.0",
         "autoprefixer": "^10.4.21",
         "babel-loader": "^10.0.0",
         "eslint": "^8.57.1",
-        "eslint-config-next": "14.0.1",
+        "eslint-config-next": "14.2.28",
         "husky": "^9.1.7",
         "lint-staged": "^15.5.1",
         "prettier": "^3.5.3",
         "rimraf": "^5.0.10",
-        "typescript": "^5.3.3"
+        "typescript": "^5.8.3"
     },
     "packageManager": "yarn@4.9.1"
 }
