@@ -23,14 +23,15 @@ First, `yarn install` or `npm install` workspace.
 
 This section outlines the basic commands for working with the project. All commands are executed from the project's root directory.
 
-* `yarn start`: Runs webpack to build the project. This is typically used for development.
-* `yarn format`: Automatically formats the code in all files with the `.js`, `.css`, `.scss`, `.sass`, `.html`, `.md`, `.json`, `.yml`, and `.yaml` extensions using Prettier.
-* `yarn lint`: ??????????
-* `yarn dev`: ????????????????
-* `yarn build`: ???????????????
-* `yarn clean`: ?????????
+**`yarn start`**: Starts the app in production mode after building.
+**`yarn format`**: Formats all code files using Prettier.
+**`yarn lint`**: Lints the codebase for quality and consistency.
+**`yarn dev`**: Starts the app in development mode with hot-reloading.
+**`yarn build`**: Builds the app for production deployment.
+**`yarn clean`**: Cleans the `.next` folder using Rimraf.
 
 ## License
 
 NextStyleX is [MIT licensed](./LICENSE).
+
 Created by Ruciloss
