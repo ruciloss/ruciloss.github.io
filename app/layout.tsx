@@ -1,4 +1,8 @@
+// Core
 import type { Metadata } from "next";
+
+// Components
+import SelfXSSWarning from "@/components/SelfXSSWarning";
 
 // Fonts
 import { Inter } from "next/font/google";
@@ -49,7 +53,10 @@ export default function RootLayout({
             lang="en"
             {...stylex.props(styles.html, styles.reset)}
         >
-            <body {...stylex.props(styles.reset, styles.body)}>{children}</body>
+            <body {...stylex.props(styles.reset, styles.body)}>
+                {children}
+                <SelfXSSWarning />
+            </body>
         </html>
     );
 }
