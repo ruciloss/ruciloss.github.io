@@ -1,22 +1,14 @@
-// Core
 import type { Metadata } from "next";
-
-// Components
 import SelfXSSWarning from "@/components/SelfXSSWarning";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
-
-// Fonts
 import { Inter } from "next/font/google";
-
-const inter = Inter({
-    subsets: ['latin'],
-});
-
-// Styles
 import "./app.css";
 import * as stylex from "@stylexjs/stylex";
 
-const DARK = "@media (prefers-color-scheme: dark)";
+const inter = Inter({
+    subsets: ["latin"],
+});
+
+const DARK = "@media (prefers-color-scheme: light)";
 
 const styles = stylex.create({
     html: {
@@ -30,24 +22,24 @@ const styles = stylex.create({
     body: {
         minHeight: "100%",
         fontSize: "16px",
+        fontWeight: 400,
+        lineHeight: 1.5,
         color: {
-            default: "black",
-            [DARK]: "white",
+            default: "#52525b",
+            [DARK]: "#a1a1aa",
         },
         backgroundImage: {
-            default: "linear-gradient(to bottom, rgb(214, 219, 220), white)",
-            [DARK]: "linear-gradient(to bottom, rgb(20, 22, 27), black)",
+            default: "linear-gradient(to bottom, rgb(214, 219, 220), #fff)",
+            [DARK]: "linear-gradient(to bottom, rgb(20, 22, 27), #000)",
         },
     },
 });
 
-// Metadata
 export const metadata: Metadata = {
     title: "Next App",
     description: "Next App with StyleX",
 };
 
-// Root
 export default function RootLayout({
     children,
 }: {
@@ -57,12 +49,12 @@ export default function RootLayout({
         <html
             id="next"
             lang="en"
+            dir="ltr"
             {...stylex.props(styles.html, styles.reset)}
         >
             <body {...stylex.props(styles.reset, styles.body)}>
                 <main className={inter.className}>
                     {children}
-                    <GoogleAnalytics id="G-ABCDEF1234" />
                     <SelfXSSWarning />
                 </main>
             </body>

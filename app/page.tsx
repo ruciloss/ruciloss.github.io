@@ -1,44 +1,123 @@
 import Image from "next/image";
 import * as stylex from "@stylexjs/stylex";
 
+const DARK = "@media (prefers-color-scheme: light)";
+
 const styles = stylex.create({
     container: {
         display: "flex",
-        flexDirection: "column", // Zajistí, že vše bude ve sloupci (na novém řádku)
-        justifyContent: "center", // Vertikální vycentrování
-        alignItems: "center", // Horizontální vycentrování
-        height: "100vh", // Výška na 100% viewportu
-        textAlign: "center", // Uprostřed textu
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        textAlign: "center",
     },
-    logo: {
-        width: "150px", // Šířka loga
-        height: "auto", // Automatická výška (pro zachování proporcí)
-        marginBottom: "20px", // Mezera pod logem
+    wrap: {
+        maxWidth: "600px",
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "start",
+        gap: "40px",
     },
     heading: {
-        fontSize: "32px", // Velikost nadpisu
-        fontWeight: "bold", // Tučný text
-        marginBottom: "10px", // Mezera pod nadpisem
-    }
+        color: {
+            default: "#000",
+            [DARK]: "#fff",
+        },
+        fontSize: "26px",
+        fontWeight: "700",
+    },
+    small: {
+        fontSize: "14px",
+    },
+    footer: {
+        display: "flex",
+        flexDirection: "column-reverse",
+        alignItems: "center",
+        justifyContent: "start",
+        gap: "10px",
+
+        "@media (min-width: 768px)": {
+            flexDirection: "row",
+            justifyContent: "space-between",
+        },
+    },
+    footerItem: {
+        display: "flex",
+        alignItems: "center",
+        gap: "10px",
+    },
+    footerImage: {
+        width: "18px",
+        height: "auto",
+    },
+    footerLink: {
+        color: "#00aaff",
+        textDecoration: "none",
+        fontWeight: "600",
+        ":hover": {
+            textDecoration: "underline",
+        },
+    },
 });
 
-export default function Navbar() {
+export default function Homepage() {
     return (
         <div {...stylex.props(styles.container)}>
-            <Image
-                {...stylex.props(styles.logo)}
-                src="/next.svg"
-                alt="Logo"
-                width={180}
-                height={38}
-                priority
-            />
+            <div {...stylex.props(styles.wrap)}>
+                <Image
+                    src="/next.svg"
+                    alt="Logo"
+                    width={180}
+                    height={0}
+                    layout="intrinsic"
+                    priority
+                />
 
-            <h1 {...stylex.props(styles.heading)}>Welcome to MySite</h1>
+                <h1 {...stylex.props(styles.heading)}>&</h1>
 
-            <p>
-                This is a simple website built with Next.js and StyleX.
-            </p>
+                <Image
+                    src="/stylex.svg"
+                    alt="Logo"
+                    width={140}
+                    height={0}
+                    layout="intrinsic"
+                    priority
+                />
+
+                <p>
+                    A simple and efficient template for building modern websites
+                    with Next.js and StyleX, designed for fast development and
+                    easy customization.
+                </p>
+
+                <div {...stylex.props(styles.footer)}>
+                    <div {...stylex.props(styles.footerItem)}>
+                        <Image
+                            {...stylex.props(styles.footerImage)}
+                            src="/logo.svg"
+                            alt="Created by Ruciloss"
+                            width={18}
+                            height={0}
+                            layout="intrinsic"
+                        />
+                        <small {...stylex.props(styles.small)}>
+                            Created by Ruciloss
+                        </small>
+                        <small>&bull;</small>
+                        <a
+                            {...stylex.props(styles.footerLink)}
+                            href="https://github.com/ruciloss/ruciloss.github.io"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            See on GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
