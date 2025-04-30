@@ -1,8 +1,9 @@
 # Next.js & StyleX
 
-![Build Status](https://img.shields.io/badge/License-MIT-blue)
-![Build Status](https://img.shields.io/badge/Version-1.0.0-orange)
-![Build Status](https://img.shields.io/badge/Release-stable-brightgreen)
+![Badge](https://img.shields.io/badge/License-MIT-blue)
+![Badge](https://img.shields.io/badge/Typescript-MIT-blue)
+![Badge](https://img.shields.io/badge/Version-1.0.0-orange)
+![Badge](https://img.shields.io/badge/Release-stable-brightgreen)
 
 A simple and efficient template for building modern websites with **Next.js** and **StyleX**, designed for fast development and easy customization.
 
