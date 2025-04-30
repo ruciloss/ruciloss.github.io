@@ -26,7 +26,7 @@ const styles = stylex.create({
         lineHeight: 1.5,
         color: {
             default: "#52525b",
-            [DARK]: "#a1a1aa",
+            [DARK]: "#d4d4d8",
         },
         backgroundImage: {
             default: "linear-gradient(to bottom, rgb(214, 219, 220), #fff)",
@@ -36,8 +36,8 @@ const styles = stylex.create({
 });
 
 export const metadata: Metadata = {
-    title: "Next App",
-    description: "Next App with StyleX",
+    title: "Next.js & StyleX",
+    description: "Next.js with StyleX",
 };
 
 export default function RootLayout({
