@@ -1,7 +1,6 @@
 # Next.js & StyleX
 
 ![Badge](https://img.shields.io/badge/License-MIT-blue)
-![Badge](https://img.shields.io/badge/Typescript-MIT-blue)
 ![Badge](https://img.shields.io/badge/Version-1.0.0-orange)
 ![Badge](https://img.shields.io/badge/Release-stable-brightgreen)
 
