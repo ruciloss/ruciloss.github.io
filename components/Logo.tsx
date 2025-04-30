@@ -5,6 +5,7 @@ const Logo = () => (
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
     >
+
         <title>Logo</title>
         <g transform="matrix(1.0115,0,0,1,-1.13968,-5.18528)">
             <g transform="matrix(22.9167,0,0,22.9167,0.988998,23.7902)">
