@@ -4,35 +4,41 @@
 ![Build Status](https://img.shields.io/badge/Version-1.0.0-orange)
 ![Build Status](https://img.shields.io/badge/Release-stable-brightgreen)
 
-WordPress Development Environment (WPDE) is a fantastic starting point for creating a WordPress template.
-It includes responsive and accessibility design, necessary files, and features needed for proper template functioning, along with a settings page and much more.
+A simple and efficient template for building modern websites with Next.js and StyleX, designed for fast development and easy customization. This project integrates TypeScript, Next 15 App Router, and StyleX for a seamless and optimized styling experience.
 
 ## Demo
 
 Check out the [demo](https://ruciloss.github.io).
 
-## Requirements
+## Getting started
 
-Make sure you have [Node.js](https://nodejs.org/) >= v20.x.x (recommended LTS) and Package Manager installed on your computer to run these commands.
+### Prerequisites
 
-## Installation
+Before you begin, ensure that you have the following installed on your machine:
+
+1. [Node.js](https://nodejs.org/) >= v20.x.x (recommended LTS)
+2. Package Manager
+
+### Installation
 
 Before running any commands, it's necessary to install the project dependencies using the following command:
 
-* **`yarn install`** or use your preferred package manager.
+`yarn install` or use your preferred package manager.
 
 ## Commands
 
 This section outlines the basic commands for working with the project. All commands are executed from the project's root directory.
 
-* **`yarn start`**: Runs webpack to build the project. This is typically used for development.
-* **`yarn format`**: Automatically formats the code in all files with the `.js`, `.css`, `.scss`, `.sass`, `.html`, `.md`, `.json`, `.yml`, and `.yaml` extensions using Prettier.
-* **`yarn lint`**: Checks JavaScript and TypeScript files in the `src/js` directory for potential issues using ESLint.
-* **`yarn dev`**: Checks CSS, SCSS, and SASS files in the `src/scss` directory for style issues using Stylelint.
+* `yarn start`: Runs webpack to build the project. This is typically used for development.
+* `yarn format`: Automatically formats the code in all files with the `.js`, `.css`, `.scss`, `.sass`, `.html`, `.md`, `.json`, `.yml`, and `.yaml` extensions using Prettier.
+* `yarn lint`: ??????????
+* `yarn dev`: ????????????????
+* `yarn build`: ???????????????
+* `yarn clean`: ?????????
 
 ## License
 
-Distributed under the **`GPLv3`** License. See [LICENSE](https://github.com/ruciloss/wpde/blob/master/LICENSE) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/ruciloss/ruciloss.github.io/blob/master/LICENSE) for more information.
 
 ## Credits
 
