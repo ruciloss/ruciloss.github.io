@@ -21,8 +21,6 @@ Before you begin, ensure that you have the following installed on your machine:
 
 First, `yarn install` or `npm install` workspace.
 
-This section outlines the basic commands for working with the project. All commands are executed from the project's root directory.
-
 * **`yarn start`**: Starts the app in production mode after building.
 * **`yarn format`**: Formats all code files using Prettier.
 * **`yarn lint`**: Lints the codebase for quality and consistency.
@@ -32,6 +30,6 @@ This section outlines the basic commands for working with the project. All comma
 
 ## Contributing
 
-NextStyleX is [MIT licensed](./LICENSE).
+Next.js & StyleX is [MIT licensed](./LICENSE).
 
 Created by Ruciloss
