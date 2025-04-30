@@ -19,11 +19,7 @@ const styles = stylex.create({
         fontSize: "32px", // Velikost nadpisu
         fontWeight: "bold", // Tučný text
         marginBottom: "10px", // Mezera pod nadpisem
-    },
-    paragraph: {
-        fontSize: "16px", // Velikost textu
-        color: "#333", // Barva textu
-    },
+    }
 });
 
 export default function Navbar() {
@@ -40,7 +36,7 @@ export default function Navbar() {
 
             <h1 {...stylex.props(styles.heading)}>Welcome to MySite</h1>
 
-            <p {...stylex.props(styles.paragraph)}>
+            <p>
                 This is a simple website built with Next.js and StyleX.
             </p>
         </div>

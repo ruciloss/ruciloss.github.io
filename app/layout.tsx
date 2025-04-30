@@ -3,14 +3,12 @@ import type { Metadata } from "next";
 
 // Components
 import SelfXSSWarning from "@/components/SelfXSSWarning";
-import CookieConsent from "@/components/CookieConsent";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 // Fonts
 import { Inter } from "next/font/google";
 
 const inter = Inter({
-    weight: '400',
     subsets: ['latin'],
 });
 
@@ -30,10 +28,11 @@ const styles = stylex.create({
         padding: 0,
     },
     body: {
-        fontFamily: `var(--font-inter), sans-serif`,
+        minHeight: "100%",
+        fontSize: "16px",
         color: {
-            default: "red",
-            [DARK]: "blue",
+            default: "black",
+            [DARK]: "white",
         },
         backgroundImage: {
             default: "linear-gradient(to bottom, rgb(214, 219, 220), white)",
@@ -56,7 +55,7 @@ export default function RootLayout({
 }) {
     return (
         <html
-            id="ruciloss"
+            id="next"
             lang="en"
             {...stylex.props(styles.html, styles.reset)}
         >
@@ -64,7 +63,6 @@ export default function RootLayout({
                 <main className={inter.className}>
                     {children}
                     <GoogleAnalytics id="G-ABCDEF1234" />
-                    <CookieConsent />
                     <SelfXSSWarning />
                 </main>
             </body>

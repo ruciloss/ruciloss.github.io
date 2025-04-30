@@ -3764,7 +3764,6 @@ __metadata:
     rimraf: "npm:^6.0.1"
     styled-jsx: "npm:^5.1.7"
     typescript: "npm:^5.8.3"
-    vanilla-cookieconsent: "npm:^3.1.0"
     webpack: "npm:^5.99.7"
   languageName: unknown
   linkType: soft
@@ -5189,13 +5188,6 @@ __metadata:
   dependencies:
     punycode: "npm:^2.1.0"
   checksum: 10c0/4ef57b45aa820d7ac6496e9208559986c665e49447cb072744c13b66925a362d96dd5a46c4530a6b8e203e5db5fe849369444440cb22ecfc26c679359e5dfa3c
-  languageName: node
-  linkType: hard
-
-"vanilla-cookieconsent@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "vanilla-cookieconsent@npm:3.1.0"
-  checksum: 10c0/f344d9786ea74850ec4274d85c9049b4d36b3ff368ddb4a0e446bad2dc0ccfad03542e97f40f7eb103b9e06d8b4d5381f63f8f0f80d898f80c5bf3e96e877382
   languageName: node
   linkType: hard
 

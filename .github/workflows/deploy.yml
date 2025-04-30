@@ -1,8 +1,4 @@
-# Sample workflow for building and deploying a Next.js site to GitHub Pages
-#
-# To get started with Next.js see: https://nextjs.org/docs/getting-started
-#
-name: Deploy Next.js site to Pages
+name: Deploy Next.js site to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -32,14 +28,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Krok pro aktivaci Corepack
+      # Corepack
       - name: Enable Corepack
         run: corepack enable
 
-      # Krok pro přípravu správné verze Yarn
+      # Yarn
       - name: Prepare correct version of Yarn
         run: corepack prepare yarn@4.9.1 --activate
 
+      # Detect package manager
       - name: Detect package manager
         id: detect-package-manager
         run: |

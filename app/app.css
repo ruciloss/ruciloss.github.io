@@ -9,22 +9,3 @@
 
 /* StyleX */
 @stylex;
-
-/* Cookies */
-.pm__title {
-    display: unset !important;
-}
-
-.pm__title small {
-    display: block;
-    margin-top: 0.5em;
-    font-weight: 400;
-}
-
-.pm__section-desc p {
-    display: block !important;
-}
-
-.pm-overlay {
-    backdrop-filter: blur(6px) !important;
-}
