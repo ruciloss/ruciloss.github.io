@@ -31,6 +31,6 @@ First, `yarn install` or `npm install` workspace.
 
 ## Contributing
 
-Next.js & StyleX is [MIT licensed](./LICENSE).
+Next.js & StyleX is [MIT](./LICENSE) licensed.
 
-Created by Ruciloss
+Created by [Ruciloss](https://github.com/ruciloss)
