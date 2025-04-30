@@ -1,3 +1,4 @@
+/* Reset */
 @layer resets {
     * {
         box-sizing: border-box;
@@ -6,8 +7,24 @@
     }
 }
 
-/**
- * The @stylex directive is used by the @stylexjs/postcss-plugin.
- * It is automatically replaced with generated CSS during builds.
- */
+/* StyleX */
 @stylex;
+
+/* Cookies */
+.pm__title {
+    display: unset !important;
+}
+
+.pm__title small {
+    display: block;
+    margin-top: 0.5em;
+    font-weight: 400;
+}
+
+.pm__section-desc p {
+    display: block !important;
+}
+
+.pm-overlay {
+    backdrop-filter: blur(6px) !important;
+}

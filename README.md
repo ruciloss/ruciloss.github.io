@@ -29,7 +29,7 @@ This section outlines the basic commands for working with the project. All comma
 * **`yarn start`**: Runs webpack to build the project. This is typically used for development.
 * **`yarn format`**: Automatically formats the code in all files with the `.js`, `.css`, `.scss`, `.sass`, `.html`, `.md`, `.json`, `.yml`, and `.yaml` extensions using Prettier.
 * **`yarn lint`**: Checks JavaScript and TypeScript files in the `src/js` directory for potential issues using ESLint.
-* **`yarn lint:css`**: Checks CSS, SCSS, and SASS files in the `src/scss` directory for style issues using Stylelint.
+* **`yarn dev`**: Checks CSS, SCSS, and SASS files in the `src/scss` directory for style issues using Stylelint.
 
 ## API
 
@@ -50,68 +50,6 @@ Using the [taxonomy API](https://github.com/hlashbrooke/wpde/blob/master/include
 `WPDE()->register_taxonomy( 'services', __( 'Services', 'wpde' ), __( 'Service', 'wpde' ), 'listing' );`
 
 This will register a new taxonomy with all the standard settings. If you would like to modify the taxonomy settings you can use the `{$taxonomy}_register_args` filter. See [the WordPress codex page](http://codex.wordpress.org/Function_Reference/register_taxonomy) for all available arguments.
-
-## 💨 Essentials
-
-The essential features that ensure your website performs optimally, with an emphasis on speed, accessibility, and responsiveness.
-
-- 🪶 Lightweight
-- 📱 Responsive
-- 🌗 Light / Dark Theme
-- 🍪 Cookie Consent
-- 🧑‍🦽 Accessibility
-- 🚀 Very Fast Performance
-- 📊 SEO Best Practices
-- 🔒 High Security
-- 🔋 Robust Stability
-- 🌍 i18n / Multilingual Support
-- 🧩 Modular / Scalable Architecture
-
-## ⚡ Features
-
-A set of powerful, user-friendly features designed to enhance both the user experience and site functionality.
-
-- 🍞 Breadcrumbs
-- 🦿 Pagination
-- 🖼️ Lightbox
-- 🛞 Carousel
-- 🛒 WooCommerce Support
-
-## ⚙️ Admin
-
-Admin features designed to make managing and customizing your site easier and more efficient.
-
-- 🎯 Options Page
-- 🗝️ Login Page
-- 🔧 Developer Tools
-- 👯 Duplicate Post
-- 🚧 Under Construction
-- ⛔ Disable Emojis
-- 🧱 Disable Block Library
-- 🚫 Disable RSS
-- ❌ Remove unwanted tags
-- 📧 SMTP Settings
-- 🧠 Help Tabs
-- 🕹️ Dashboard Metabox
-- 🔌 ACF Support
-- 🦾 Helper Functions
-- 📌 Register Post Type
-- 🏷️ Register Taxonomy
-
-## 🧪 Development
-
-Tools and technologies designed to enhance the development process and ensure a high-quality codebase.
-
-- 📐 Custom Bootstrap
-- 🎨 SCSS
-- 🍦 Vanilla JS
-- 🧊 Typescript
-- 🍇 Yarn Berry
-- 📦 Webpack
-- 💡 ESLint
-- 🔍 Stylelint
-- ✨ Prettier
-- 💻 Editorconfig
 
 ## License
 
