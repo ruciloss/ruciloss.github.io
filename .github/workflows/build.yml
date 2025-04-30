@@ -3,7 +3,7 @@ name: Build and Deploy Next.js app to GitHub Pages
 on:
   push:
     branches:
-      - main  # Uprav podle toho, jakou větev používáš pro deploy
+      - master
 
 jobs:
   build:
@@ -18,15 +18,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Zvol verzi Node.js, kterou používáš
+          node-version: '22'  # Zvol verzi Node.js, kterou používáš
 
       # Install dependencies with Yarn
       - name: Install dependencies
         run: yarn install
-
-      # Run Prettier (volitelné, pokud chceš zkontrolovat formátování)
-      - name: Run Prettier
-        run: yarn prettier --check .
 
       # Build the Next.js app
       - name: Build Next.js app

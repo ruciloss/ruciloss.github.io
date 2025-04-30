@@ -11,16 +11,20 @@
         "start": "next start"
     },
     "dependencies": {
+        "@babel/core": "^7.26.10",
         "@stylexjs/open-props": "0.11.1",
         "@stylexjs/stylex": "0.12.0",
         "next": "14.2.21",
+        "postcss": "^8.5.3",
         "react": "^18.3.0",
         "react-dom": "^18.3.0",
-        "styled-jsx": "^5.1.1"
+        "styled-jsx": "^5.1.1",
+        "webpack": "^5.99.7"
     },
     "devDependencies": {
         "@stylexjs/eslint-plugin": "0.12.0",
         "@stylexjs/postcss-plugin": "0.12.0",
+        "@types/babel__core": "^7",
         "@types/json-schema": "^7.0.15",
         "@types/node": "^22.7.6",
         "@types/react": "^18.3.0",
