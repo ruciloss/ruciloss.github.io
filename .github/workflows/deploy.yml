@@ -10,37 +10,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Check out the code from the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '22'
 
-      # Enable Corepack (required for Yarn 4+)
       - name: Enable Corepack
         run: corepack enable
 
-      # Use correct Yarn version from packageManager field
       - name: Activate correct Yarn version
         run: corepack prepare yarn@4.9.1 --activate
 
-      # Install dependencies with Yarn
       - name: Install dependencies
         run: yarn install
 
-      # Build the Next.js app
-      - name: Build Next.js app
+      - name: Disable Next.js telemetry
+        run: npx next telemetry disable
+
+      - name: Build Next.js app (export static)
         run: yarn build
 
-      # Export Next.js app as static files
-      - name: Export Next.js app
-        run: yarn next export
-
-      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
