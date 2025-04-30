@@ -1,0 +1,45 @@
+name: Build and Deploy Next.js app to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Uprav podle toho, jakou větev používáš pro deploy
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Node.js environment (verze podle tvého projektu)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Zvol verzi Node.js, kterou používáš
+
+      # Install dependencies with Yarn
+      - name: Install dependencies
+        run: yarn install
+
+      # Run Prettier (volitelné, pokud chceš zkontrolovat formátování)
+      - name: Run Prettier
+        run: yarn prettier --check .
+
+      # Build the Next.js app
+      - name: Build Next.js app
+        run: yarn build
+
+      # Export Next.js app as static files
+      - name: Export Next.js app
+        run: yarn next export
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out  # Statické soubory se obvykle exportují do složky ./out
+
