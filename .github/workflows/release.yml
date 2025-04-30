@@ -1,9 +1,14 @@
-name: Create GitHub release
+name: Create GitHub Release
 
 on:
   push:
     branches:
       - master
+
+permissions:
+  contents: write       # Umožňuje psát do repozitáře (včetně release)
+  id-token: write       # Umožňuje používání ID tokenu pro autentizaci
+  actions: read         # Umožňuje číst GitHub Actions
 
 jobs:
   release:
@@ -15,6 +20,6 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.sha }}
+          tag_name: ${{ github.sha }}  # Používá commit SHA jako tag
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
