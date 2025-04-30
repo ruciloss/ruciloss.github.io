@@ -4,11 +4,9 @@
 ![Build Status](https://img.shields.io/badge/Version-1.0.0-orange)
 ![Build Status](https://img.shields.io/badge/Release-stable-brightgreen)
 
-This project integrates modern technologies and best practices, focusing on efficient, scalable, and optimized solutions that ensure high performance and maintainability.
+A simple and efficient template for building modern websites with **Next.js** and **StyleX**, designed for fast development and easy customization. This project integrates modern technologies and best practices, focusing on efficient, scalable, and optimized solutions that ensure high performance and maintainability.
 
-## Demo
-
-Check out the [demo](https://ruciloss.github.io).
+[Check out the demo](https://ruciloss.github.io)
 
 ## Getting started
 
@@ -19,15 +17,13 @@ Before you begin, ensure that you have the following installed on your machine:
 1. [Node.js](https://nodejs.org/) >= v20.x.x (recommended LTS)
 2. A package manager like [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/).
 
-   It is recommended to use **Yarn** for easier dependency management, but **npm** is also supported.
-
 ### Installation
 
 Before running any commands, it's necessary to install the project dependencies using the following command:
 
 `yarn install` or use your preferred package manager.
 
-## Commands
+### Tasks
 
 This section outlines the basic commands for working with the project. All commands are executed from the project's root directory.
 
