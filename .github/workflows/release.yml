@@ -20,6 +20,7 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.sha }}  # Používá commit SHA jako tag
+          # Použijeme jednodušší tag formát, např. `v1.0.0` nebo podobně
+          tag_name: v${{ github.run_number }}  # Používá číselné označení pro verzi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
