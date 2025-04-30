@@ -38,6 +38,6 @@ This section outlines the basic commands for working with the project. All comma
 
 Distributed under the MIT License. See [LICENSE](https://github.com/ruciloss/ruciloss.github.io/blob/master/LICENSE) for more information.
 
-## Credits
+### Credits
 
-Copyright © Ruciloss
+Created by Ruciloss
