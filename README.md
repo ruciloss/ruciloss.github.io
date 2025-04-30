@@ -15,7 +15,7 @@ A simple and efficient template for building modern websites with **Next.js** an
 Before you begin, ensure that you have the following installed on your machine:
 
 1. [Node.js](https://nodejs.org/) >= v20.x.x (recommended LTS)
-2. A package manager [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/).
+2. [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/) package manager
 
 ### Tasks
 
@@ -30,6 +30,6 @@ First, `yarn install` or `npm install` workspace.
 
 ## Contributing
 
-Next.js & StyleX is under [MIT](./LICENSE) license.
+Next.js & StyleX is under [MIT License](./LICENSE)
 
 Created by [Ruciloss](https://github.com/ruciloss)
