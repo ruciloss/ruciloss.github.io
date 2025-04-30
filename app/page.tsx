@@ -19,7 +19,21 @@ const styles = stylex.create({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "start",
-        gap: "40px",
+        gap: "50px",
+    },
+    row: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "start",
+
+        "@media (min-width: 768px)": {
+            flexDirection: "row",
+            justifyContent: "space-between",
+        },
+    },
+    header: {
+        gap: "30px",
     },
     heading: {
         color: {
@@ -33,16 +47,7 @@ const styles = stylex.create({
         fontSize: "14px",
     },
     footer: {
-        display: "flex",
-        flexDirection: "column-reverse",
-        alignItems: "center",
-        justifyContent: "start",
         gap: "10px",
-
-        "@media (min-width: 768px)": {
-            flexDirection: "row",
-            justifyContent: "space-between",
-        },
     },
     footerItem: {
         display: "flex",
@@ -53,7 +58,7 @@ const styles = stylex.create({
         width: "18px",
         height: "auto",
     },
-    footerLink: {
+    link: {
         color: "#00aaff",
         textDecoration: "none",
         fontWeight: "600",
@@ -67,33 +72,88 @@ export default function Homepage() {
     return (
         <div {...stylex.props(styles.container)}>
             <div {...stylex.props(styles.wrap)}>
-                <Image
-                    src="/next.svg"
-                    alt="Logo"
-                    width={180}
-                    height={0}
-                    layout="intrinsic"
-                    priority
-                />
+                <div {...stylex.props(styles.row, styles.header)}>
+                    <Image
+                        src="/next.svg"
+                        alt="Logo"
+                        width={180}
+                        height={0}
+                        layout="intrinsic"
+                        priority
+                    />
 
-                <h1 {...stylex.props(styles.heading)}>&</h1>
+                    <h1 {...stylex.props(styles.heading)}>&</h1>
 
-                <Image
-                    src="/stylex.svg"
-                    alt="Logo"
-                    width={140}
-                    height={0}
-                    layout="intrinsic"
-                    priority
-                />
-
+                    <Image
+                        src="/stylex.svg"
+                        alt="Logo"
+                        width={130}
+                        height={0}
+                        layout="intrinsic"
+                        priority
+                    />
+                </div>
                 <p>
                     A simple and efficient template for building modern websites
-                    with Next.js and StyleX, designed for fast development and
-                    easy customization.
+                    with {" "}
+                    <a
+                        {...stylex.props(styles.link)}
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Next.js
+                    </a>
+                    {" "} and {" "}
+                    <a
+                        {...stylex.props(styles.link)}
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        StyleX
+                    </a>
+                    , designed for fast development and easy customization.
                 </p>
 
-                <div {...stylex.props(styles.footer)}>
+                <p>
+    Also includes:{" "}
+    <a
+        {...stylex.props(styles.link)}
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        GitHub CI/CD
+    </a>,{" "}
+    <a
+        {...stylex.props(styles.link)}
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Husky
+    </a>{" "}+{" "}
+    <a
+        {...stylex.props(styles.link)}
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Lint Staged
+    </a>,{" "}
+    <a
+        {...stylex.props(styles.link)}
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Prettier
+    </a>
+</p>
+
+
+                <div {...stylex.props(styles.row, styles.footer)}>
                     <div {...stylex.props(styles.footerItem)}>
                         <Image
                             {...stylex.props(styles.footerImage)}
@@ -108,7 +168,7 @@ export default function Homepage() {
                         </small>
                         <small>&bull;</small>
                         <a
-                            {...stylex.props(styles.footerLink)}
+                            {...stylex.props(styles.link)}
                             href="https://github.com/ruciloss/ruciloss.github.io"
                             target="_blank"
                             rel="noopener noreferrer"

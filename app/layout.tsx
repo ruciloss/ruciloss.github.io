@@ -53,10 +53,10 @@ export default function RootLayout({
             {...stylex.props(styles.html, styles.reset)}
         >
             <body {...stylex.props(styles.reset, styles.body)}>
-                <main className={inter.className}>
+                <div className={inter.className}>
                     {children}
                     <SelfXSSWarning />
-                </main>
+                </div>
             </body>
         </html>
     );
