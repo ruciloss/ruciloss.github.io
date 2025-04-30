@@ -14,11 +14,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Set up Node.js environment (verze podle tvého projektu)
+      # Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'  # Zvol verzi Node.js, kterou používáš
+          node-version: '22'
+
+      # Enable Corepack (required for Yarn 4+)
+      - name: Enable Corepack
+        run: corepack enable
+
+      # Use correct Yarn version from packageManager field
+      - name: Activate correct Yarn version
+        run: corepack prepare yarn@4.9.1 --activate
 
       # Install dependencies with Yarn
       - name: Install dependencies
@@ -37,5 +45,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out  # Statické soubory se obvykle exportují do složky ./out
-
+          publish_dir: ./out
