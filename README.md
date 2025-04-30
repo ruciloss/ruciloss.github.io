@@ -30,7 +30,7 @@ This section outlines the basic commands for working with the project. All comma
 **`yarn build`**: Builds the app for production deployment.
 **`yarn clean`**: Cleans the `.next` folder using Rimraf.
 
-## License
+## Contributing
 
 NextStyleX is [MIT licensed](./LICENSE).
 
