@@ -17,7 +17,9 @@ Check out the [demo](https://ruciloss.github.io).
 Before you begin, ensure that you have the following installed on your machine:
 
 1. [Node.js](https://nodejs.org/) >= v20.x.x (recommended LTS)
-2. Package Manager
+2. A package manager like [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/).
+
+   It is recommended to use **Yarn** for easier dependency management, but **npm** is also supported.
 
 ### Installation
 
