@@ -1,7 +1,7 @@
 import Image from "next/image";
 import * as stylex from "@stylexjs/stylex";
 
-const DARK = "@media (prefers-color-scheme: light)";
+const DARK = "@media (prefers-color-scheme: dark)";
 
 const styles = stylex.create({
     container: {
