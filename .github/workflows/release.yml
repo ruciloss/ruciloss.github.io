@@ -6,9 +6,9 @@ on:
       - master
 
 permissions:
-  contents: write       # Umožňuje psát do repozitáře (včetně release)
-  id-token: write       # Umožňuje používání ID tokenu pro autentizaci
-  actions: read         # Umožňuje číst GitHub Actions
+  contents: write
+  id-token: write
+  actions: read
 
 jobs:
   release:
@@ -20,7 +20,6 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          # Použijeme jednodušší tag formát, např. `v1.0.0` nebo podobně
-          tag_name: v${{ github.run_number }}  # Používá číselné označení pro verzi
+          tag_name: v${{ github.run_number }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
