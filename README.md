@@ -15,7 +15,7 @@ A simple and efficient template for building modern websites with **Next.js** an
 Before you begin, ensure that you have the following installed on your machine:
 
 1. [Node.js](https://nodejs.org/) >= v20.x.x (recommended LTS)
-2. [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/).
+2. A package manager [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/).
 
 ### Tasks
 
@@ -32,8 +32,5 @@ This section outlines the basic commands for working with the project. All comma
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/ruciloss/ruciloss.github.io/blob/master/LICENSE) for more information.
-
-### Credits
-
+NextStyleX is [MIT licensed](./LICENSE).
 Created by Ruciloss
