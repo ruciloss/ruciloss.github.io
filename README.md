@@ -10,7 +10,7 @@ It includes responsive and accessibility design, necessary files, and features n
 
 ## Demo
 
-Check out the https://demo.github.io
+Check out the [demo](https://ruciloss.github.io).
 
 ## Requirements
 
@@ -30,26 +30,6 @@ This section outlines the basic commands for working with the project. All comma
 * **`yarn format`**: Automatically formats the code in all files with the `.js`, `.css`, `.scss`, `.sass`, `.html`, `.md`, `.json`, `.yml`, and `.yaml` extensions using Prettier.
 * **`yarn lint`**: Checks JavaScript and TypeScript files in the `src/js` directory for potential issues using ESLint.
 * **`yarn dev`**: Checks CSS, SCSS, and SASS files in the `src/scss` directory for style issues using Stylelint.
-
-## API
-
-????????????
-
-### Registering a new post type
-
-Using the [post type API](https://github.com/hlashbrooke/wpde/blob/master/includes/lib/class-wpde-post-type.php) and the wrapper function from the main plugin class you can easily register new post types with one line of code.
-
-`WPDE()->register_post_type( 'listing', __( 'Listings', 'wpde' ), __( 'Listing', 'wpde' ) );`
-
-This will register a new post type with all the standard settings. If you would like to modify the post type settings you can use the `{$post_type}_register_args` filter. See [the WordPress codex page](http://codex.wordpress.org/Function_Reference/register_post_type) for all available arguments.
-
-### Registering a new taxonomy
-
-Using the [taxonomy API](https://github.com/hlashbrooke/wpde/blob/master/includes/lib/class-wpde-taxonomy.php) and the wrapper function from the main plugin class you can easily register new taxonomies with one line of code.
-
-`WPDE()->register_taxonomy( 'services', __( 'Services', 'wpde' ), __( 'Service', 'wpde' ), 'listing' );`
-
-This will register a new taxonomy with all the standard settings. If you would like to modify the taxonomy settings you can use the `{$taxonomy}_register_args` filter. See [the WordPress codex page](http://codex.wordpress.org/Function_Reference/register_taxonomy) for all available arguments.
 
 ## License
 
