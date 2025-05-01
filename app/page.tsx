@@ -32,7 +32,7 @@ const styles = stylex.create({
     },
     gitClone: {
         fontSize: "14px",
-        cursor: "pointer"
+        cursor: "pointer",
     },
     xs: {
         fontSize: "12px",
@@ -91,14 +91,14 @@ const styles = stylex.create({
         borderWidth: "1px",
         borderColor: {
             default: "red",
-            [DARK]: "blue"
+            [DARK]: "blue",
         },
-        borderRadius: "9px"
+        borderRadius: "9px",
     },
     badges: {
         display: "flex",
         alignItems: "center",
-        gap: "10px"
+        gap: "10px",
     },
     footer: {
         display: "flex",
@@ -165,19 +165,19 @@ export default function Homepage() {
                     />
                 </div>
                 <div {...stylex.props(styles.badges)}>
-                <Image
+                    <Image
                         src="https://img.shields.io/badge/License-MIT-blue"
                         alt="See on GitHub"
                         width={82}
                         height={20}
                     />
-                                        <Image
+                    <Image
                         src="https://img.shields.io/badge/Version-1.0.0-orange"
                         alt="See on GitHub"
                         width={90}
                         height={20}
                     />
-                                        <Image
+                    <Image
                         src="https://img.shields.io/badge/Release-stable-brightgreen"
                         alt="See on GitHub"
                         width={96}

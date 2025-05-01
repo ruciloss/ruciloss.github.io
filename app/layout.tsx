@@ -3,7 +3,7 @@ import SelfXSSWarning from "@/components/SelfXSSWarning";
 import { Inter } from "next/font/google";
 import "./app.css";
 import * as stylex from "@stylexjs/stylex";
-import { globalTokens as $, text } from '../app/globalTokens.stylex';
+import { globalTokens as $, text } from "../app/globalTokens.stylex";
 
 const inter = Inter({
     subsets: ["latin"],
