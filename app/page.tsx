@@ -144,8 +144,7 @@ export default function Homepage() {
                     />
                 </div>
                 <div>
-                    A simple template for building modern websites
-                    with{" "}
+                    A simple template for building modern websites with
                     <a
                         {...stylex.props(styles.link)}
                         href="https://nextjs.org"
