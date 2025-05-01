@@ -20,13 +20,12 @@ const nextConfig = {
         ],
     },
 
-    // i18n (zakomentováno dle původního nastavení)
     /*
-  i18n: {
-    locales: ['en', 'cs'],
-    defaultLocale: 'en',
-  },
-  */
+    i18n: {
+        locales: ['en', 'cs'],
+        defaultLocale: 'en',
+    },
+    */
 
     // Hides the "X-Powered-By: Next.js" header
     poweredByHeader: false,
