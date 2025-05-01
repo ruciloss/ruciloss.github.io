@@ -8,13 +8,6 @@ const nextConfig = {
     // Static export
     output: "export",
 
-    /*
-    i18n: {
-        locales: ['en', 'cs'],
-        defaultLocale: 'en',
-    },
-    */
-
     // Images
     images: {
         unoptimized: true,
