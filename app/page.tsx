@@ -144,7 +144,7 @@ export default function Homepage() {
                     />
                 </div>
                 <div>
-                    A simple and efficient template for building modern websites
+                    A simple template for building modern websites
                     with{" "}
                     <a
                         {...stylex.props(styles.link)}
