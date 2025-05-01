@@ -3,6 +3,7 @@ import SelfXSSWarning from "@/components/SelfXSSWarning";
 import { Inter } from "next/font/google";
 import "./app.css";
 import * as stylex from "@stylexjs/stylex";
+import { globalTokens as $, text } from '../app/globalTokens.stylex';
 
 const inter = Inter({
     subsets: ["latin"],
@@ -21,11 +22,11 @@ const styles = stylex.create({
     },
     body: {
         minHeight: "100%",
-        fontSize: "16px",
+        fontSize: text.p,
         fontWeight: 400,
         lineHeight: 1.5,
         color: {
-            default: "#52525b",
+            default: `rgba(${$.foregroundR}, ${$.foregroundG}, ${$.foregroundB}, 1)`,
             [DARK]: "#d4d4d8",
         },
         backgroundImage: {

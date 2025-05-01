@@ -1,5 +1,6 @@
 import Image from "next/image";
 import * as stylex from "@stylexjs/stylex";
+import CodeSnippet from "@/components/CodeSnippet";
 
 const DARK = "@media (prefers-color-scheme: dark)";
 
@@ -28,6 +29,10 @@ const styles = stylex.create({
             default: "#52525b",
             [DARK]: "#a1a1aa",
         },
+    },
+    gitClone: {
+        fontSize: "14px",
+        cursor: "pointer"
     },
     xs: {
         fontSize: "12px",
@@ -66,6 +71,35 @@ const styles = stylex.create({
         WebkitBackgroundClip: "text",
         color: "transparent",
     },
+    github: {
+        display: "flex",
+    },
+    actions: {
+        display: "flex",
+        flexDirection: {
+            default: "column",
+            "@media (min-width: 768px)": "row",
+        },
+        alignItems: "center",
+        justifyContent: {
+            default: "start",
+            "@media (min-width: 768px)": "center",
+        },
+        gap: "15px",
+        padding: "10px 15px",
+        borderStyle: "solid",
+        borderWidth: "1px",
+        borderColor: {
+            default: "red",
+            [DARK]: "blue"
+        },
+        borderRadius: "9px"
+    },
+    badges: {
+        display: "flex",
+        alignItems: "center",
+        gap: "10px"
+    },
     footer: {
         display: "flex",
         flexDirection: {
@@ -90,20 +124,20 @@ const styles = stylex.create({
         alignItems: "center",
         gap: "10px",
         textDecoration: "none",
-        padding: "8px 15px",
         borderRadius: "9px",
-        color: {
-            default: "#000",
-            [DARK]: "#fff",
-        },
+        color: "#00aaff",
         borderStyle: "solid",
         borderWidth: "2px",
-        borderColor: {
-            default: "#000",
-            [DARK]: "#fff",
-            ":hover": "transparent",
-        },
+        borderColor: "#00aaff",
         transition: "all .2s ease",
+        padding: {
+            default: "10px 15px",
+            ":hover": "14px 18px",
+        },
+        margin: {
+            default: "4px 3px",
+            ":hover": "0",
+        },
     },
 });
 
@@ -117,9 +151,7 @@ export default function Homepage() {
                         src="/next.svg"
                         alt="Logo"
                         width={180}
-                        height={0}
-                        layout="intrinsic"
-                        priority
+                        height={37}
                     />
 
                     <div {...stylex.props(styles.divider)}>&</div>
@@ -129,9 +161,27 @@ export default function Homepage() {
                         src="/stylex.svg"
                         alt="Logo"
                         width={140}
-                        height={0}
-                        layout="intrinsic"
-                        priority
+                        height={95}
+                    />
+                </div>
+                <div {...stylex.props(styles.badges)}>
+                <Image
+                        src="https://img.shields.io/badge/License-MIT-blue"
+                        alt="See on GitHub"
+                        width={82}
+                        height={20}
+                    />
+                                        <Image
+                        src="https://img.shields.io/badge/Version-1.0.0-orange"
+                        alt="See on GitHub"
+                        width={90}
+                        height={20}
+                    />
+                                        <Image
+                        src="https://img.shields.io/badge/Release-stable-brightgreen"
+                        alt="See on GitHub"
+                        width={96}
+                        height={20}
                     />
                 </div>
                 <div>
@@ -155,30 +205,14 @@ export default function Homepage() {
                     </a>
                     , designed for fast development and easy customization.
                 </div>
-                <a
-                    {...stylex.props(styles.button)}
-                    href="https://github.com/ruciloss/ruciloss.github.io"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <Image
-                        {...stylex.props(styles.inverseImage)}
-                        src="/github.svg"
-                        alt="Created by Ruciloss"
-                        width={26}
-                        height={0}
-                        layout="intrinsic"
-                    />
-                    See on GitHub
-                </a>
+                <CodeSnippet />
                 <div {...stylex.props(styles.footer)}>
                     <div {...stylex.props(styles.footerItem)}>
                         <Image
                             src="/logo.svg"
                             alt="Created by Ruciloss"
                             width={16}
-                            height={0}
-                            layout="intrinsic"
+                            height={16}
                         />
                         <div {...stylex.props(styles.xs, styles.textMuted)}>
                             Created by Ruciloss &copy;{" "}
