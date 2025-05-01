@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "next-app",
+    "name": "next",
     "version": "1.0.0",
     "scripts": {
         "clean": "rimraf .next",
