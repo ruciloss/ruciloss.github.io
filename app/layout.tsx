@@ -37,7 +37,8 @@ const styles = stylex.create({
 
 export const metadata: Metadata = {
     title: "Next.js & StyleX",
-    description: "Next.js with StyleX",
+    description:
+        "A simple template for building modern websites with Next.js & StyleX.",
 };
 
 export default function RootLayout({
