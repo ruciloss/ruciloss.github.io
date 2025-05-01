@@ -2,6 +2,7 @@
 const path = require("path");
 
 /*
+// Bundle Analyzer
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
     enabled: process.env.ANALYZE === "true",
 });
@@ -20,13 +21,14 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "**.mycdn.com",
-                pathname: "/images/**",
+                hostname: "**.domain.com",
+                pathname: "/img/**",
             },
         ],
     },
 
     /*
+    // i18n
     i18n: {
         locales: ['en', 'cs'],
         defaultLocale: 'en',
@@ -77,4 +79,7 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-//module.exports = withBundleAnalyzer(nextConfig);
+/*
+// Bundle Analyzer
+module.exports = withBundleAnalyzer(nextConfig);
+*/

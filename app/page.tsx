@@ -29,11 +29,6 @@ const styles = stylex.create({
             [DARK]: "#a1a1aa",
         },
     },
-    small: {
-        fontSize: "14px",
-        display: "block",
-        marginTop: "25px",
-    },
     xs: {
         fontSize: "12px",
     },
@@ -164,45 +159,6 @@ export default function Homepage() {
                         StyleX
                     </a>
                     , designed for fast development and easy customization.
-                    <div {...stylex.props(styles.small, styles.textMuted)}>
-                        Also includes:{" "}
-                        <a
-                            {...stylex.props(styles.link)}
-                            href="https://docs.github.com/en/actions"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            GitHub CI/CD
-                        </a>
-                        ,{" "}
-                        <a
-                            {...stylex.props(styles.link)}
-                            href="https://typicode.github.io/husky"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Husky
-                        </a>{" "}
-                        +{" "}
-                        <a
-                            {...stylex.props(styles.link)}
-                            href="https://github.com/okonet/lint-staged"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Lint Staged
-                        </a>
-                        ,{" "}
-                        <a
-                            {...stylex.props(styles.link)}
-                            href="https://prettier.io"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Prettier
-                        </a>{" "}
-                        and more..
-                    </div>
                 </div>
                 <a
                     {...stylex.props(styles.button)}
