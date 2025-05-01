@@ -14,7 +14,7 @@ const styles = stylex.create({
         margin: "auto",
         padding: "0 15px",
     },
-    wrap: {
+    card: {
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -120,7 +120,7 @@ const styles = stylex.create({
 export default function Homepage() {
     return (
         <div {...stylex.props(styles.container)}>
-            <div {...stylex.props(styles.wrap)}>
+            <div {...stylex.props(styles.card)}>
                 <div {...stylex.props(styles.header)}>
                     <Image
                         {...stylex.props(styles.inverseImage)}
