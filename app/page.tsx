@@ -5,110 +5,105 @@ const DARK = "@media (prefers-color-scheme: dark)";
 
 const styles = stylex.create({
     container: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        maxWidth: "600px",
-        margin: "auto",
-        padding: "0 15px",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100vh",
+      maxWidth: "600px",
+      margin: "auto",
+      padding: "0 15px",
     },
     card: {
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "start",
-        alignItems: "center",
-        gap: "50px",
-        textAlign: "center",
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "start",
+      alignItems: "center",
+      gap: "50px",
+      textAlign: "center",
     },
     textMuted: {
-        color: {
-            default: "#52525b",
-            [DARK]: "#a1a1aa",
-        },
+      color: {
+        default: "#52525b",
+        [DARK]: "#a1a1aa",
+      },
     },
     xs: {
-        fontSize: "12px",
+      fontSize: "12px",
     },
     link: {
-        color: "#00aaff",
-        textDecoration: "none",
-        fontWeight: "600",
-
-        ":hover": {
-            textDecoration: "underline",
-        },
+      color: "#00aaff",
+      textDecoration: {
+        default: "none",
+        ":hover": "underline", // Opraveno: ":hover" uvnitř "textDecoration"
+      },
+      fontWeight: 600,
     },
     inverseImage: {
-        filter: {
-            default:
-                "invert(0%) sepia(3%) saturate(0%) hue-rotate(213deg) brightness(95%) contrast(103%)",
-            [DARK]: "invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)",
-        },
+      filter: {
+        default:
+          "invert(0%) sepia(3%) saturate(0%) hue-rotate(213deg) brightness(95%) contrast(103%)",
+        [DARK]: "invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)",
+      },
     },
     header: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "start",
-        gap: "30px",
-
-        "@media (min-width: 768px)": {
-            flexDirection: "row",
-            justifyContent: "center",
-        },
+      display: "flex",
+      flexDirection: {
+        default: "column",
+        "@media (min-width: 768px)": "row", // Opraveno: "@media" uvnitř "flexDirection"
+      },
+      alignItems: "center",
+      justifyContent: {
+        default: "start",
+        "@media (min-width: 768px)": "center", // Opraveno: "@media" uvnitř "justifyContent"
+      },
+      gap: "30px",
     },
     divider: {
-        fontSize: "60px",
-        background: "linear-gradient(to right, purple, #00aaff)",
-        WebkitBackgroundClip: "text",
-        color: "transparent",
+      fontSize: "60px",
+      background: "linear-gradient(to right, purple, #00aaff)",
+      WebkitBackgroundClip: "text",
+      color: "transparent",
     },
     footer: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "start",
-        gap: "10px",
-        marginTop: "10vh",
-
-        "@media (min-width: 768px)": {
-            flexDirection: "row",
-            justifyContent: "center",
-        },
+      display: "flex",
+      flexDirection: {
+        default: "column",
+        "@media (min-width: 768px)": "row", // Opraveno: "@media" uvnitř "flexDirection"
+      },
+      alignItems: "center",
+      justifyContent: {
+        default: "start",
+        "@media (min-width: 768px)": "center", // Opraveno: "@media" uvnitř "justifyContent"
+      },
+      gap: "10px",
+      marginTop: "10vh",
     },
     footerItem: {
-        display: "flex",
-        alignItems: "center",
-        gap: "10px",
+      display: "flex",
+      alignItems: "center",
+      gap: "10px",
     },
     button: {
-        display: "flex",
-        alignItems: "center",
-        gap: "10px",
-        textDecoration: "none",
-        padding: "8px 15px",
-        borderRadius: "9px",
-        color: {
-            default: "#000",
-            [DARK]: "#fff",
-        },
-        borderStyle: "solid",
-        borderWidth: "2px",
-        borderColor: {
-            default: "#000",
-            [DARK]: "#fff",
-        },
-        transition: "all .2s ease",
-
-        ":hover": {
-            borderColor: {
-                default: "transparent",
-                [DARK]: "transparent",
-            },
-        },
+      display: "flex",
+      alignItems: "center",
+      gap: "10px",
+      textDecoration: "none",
+      padding: "8px 15px",
+      borderRadius: "9px",
+      color: {
+        default: "#000",
+        [DARK]: "#fff",
+      },
+      borderStyle: "solid",
+      borderWidth: "2px",
+      borderColor: {
+        default: "#000",
+        [DARK]: "#fff",
+        ":hover": "transparent", // Opraveno: ":hover" uvnitř "borderColor"
+      },
+      transition: "all .2s ease",
     },
 });
 
