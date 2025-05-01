@@ -113,7 +113,7 @@ const styles = stylex.create({
                 [DARK]: "transparent",
             },
         },
-    },
+},
 });
 
 export default function Homepage() {
