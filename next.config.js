@@ -2,43 +2,31 @@
 const path = require("path");
 
 /*
-// Bundle Analyzer
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
     enabled: process.env.ANALYZE === "true",
 });
 */
 
 const nextConfig = {
-    // Static export
+    poweredByHeader: false,
     output: "export",
-
-    // Images
     images: {
-        // Static export
         unoptimized: true,
-
-        // Rules
         remotePatterns: [
             {
                 protocol: "https",
-                hostname: "**.domain.com",
+                hostname: "ruciloss.github.io",
                 pathname: "/img/**",
             },
         ],
     },
-
     /*
-    // i18n
     i18n: {
         locales: ['en', 'cs'],
         defaultLocale: 'en',
     },
     */
 
-    // Hides the "X-Powered-By: Next.js" header
-    poweredByHeader: false,
-
-    // StyleX
     transpilePackages: ["@stylexjs/open-props"],
     eslint: { ignoreDuringBuilds: true },
 
@@ -79,7 +67,4 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-/*
-// Bundle Analyzer
-module.exports = withBundleAnalyzer(nextConfig);
-*/
+// module.exports = withBundleAnalyzer(nextConfig);

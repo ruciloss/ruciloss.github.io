@@ -1,9 +1,9 @@
 root = true
 
 [*]
-indent_style = space                ; Use spaces for indentation
-indent_size = 4                     ; Number of spaces per indentation level
-end_of_line = lf                    ; Line endings to use (Line Feed)
-charset = utf-8                     ; File character encoding
-trim_trailing_whitespace = true     ; Remove any whitespace at the end of lines
-insert_final_newline = true         ; Ensure each file ends with a newline character
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
