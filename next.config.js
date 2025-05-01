@@ -1,16 +1,23 @@
 // @type {import('next').NextConfig}
 const path = require("path");
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+    enabled: process.env.ANALYZE === "true",
+});
 
 const nextConfig = {
     // Static export
     output: "export",
 
+    /*
+    i18n: {
+        locales: ['en', 'cs'],
+        defaultLocale: 'en',
+    },
+    */
+
     // Images
     images: {
-        // Static export
         unoptimized: true,
-
-        // Rules
         remotePatterns: [
             {
                 protocol: "https",
@@ -20,14 +27,7 @@ const nextConfig = {
         ],
     },
 
-    /*
-    i18n: {
-        locales: ['en', 'cs'],
-        defaultLocale: 'en',
-    },
-    */
-
-    // Hides the "X-Powered-By: Next.js" header
+    // Hide "X-Powered-By: Next.js" header
     poweredByHeader: false,
 
     // StyleX
@@ -70,4 +70,5 @@ const nextConfig = {
     },
 };
 
-module.exports = nextConfig;
+// Wrapping Next.js config with the bundle analyzer
+module.exports = withBundleAnalyzer(nextConfig);

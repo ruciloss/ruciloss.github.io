@@ -27,6 +27,7 @@ First, `yarn install` or `npm install` workspace.
 * **`yarn dev`**: Starts the app in development mode with hot-reloading.
 * **`yarn build`**: Builds the app for production deployment.
 * **`yarn clean`**: Cleans the `.next` folder using Rimraf.
+* **`yarn analyze`**: Builds the project and visualizes the bundle size.
 
 ## Contributing
 
