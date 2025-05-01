@@ -46,6 +46,13 @@ const styles = stylex.create({
             textDecoration: "underline",
         },
     },
+    inverseImage: {
+        filter: {
+            default:
+                "invert(0%) sepia(3%) saturate(0%) hue-rotate(213deg) brightness(95%) contrast(103%)",
+            [DARK]: "invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)",
+        },
+    },
     header: {
         display: "flex",
         flexDirection: "column",
@@ -75,12 +82,6 @@ const styles = stylex.create({
         "@media (min-width: 768px)": {
             flexDirection: "row",
             justifyContent: "center",
-        },
-    },
-    inverseImage: {
-        filter: {
-            default: "invert(0%) sepia(3%) saturate(0%) hue-rotate(213deg) brightness(95%) contrast(103%)",
-            [DARK]: "invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)",
         },
     },
     footerItem: {
