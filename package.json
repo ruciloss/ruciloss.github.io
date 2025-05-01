@@ -13,11 +13,6 @@
         "postinstall": "husky",
         "prepare": "husky"
     },
-    "lint-staged": {
-        "**/*.{js,jsx,ts,tsx,json,css,scss,html,yml}": [
-            "prettier --write"
-        ]
-    },
     "dependencies": {
         "@babel/core": "^7.27.1",
         "@next/bundle-analyzer": "^15.3.1",
