@@ -3735,9 +3735,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-app@workspace:.":
+"next@workspace:.":
   version: 0.0.0-use.local
-  resolution: "next-app@workspace:."
+  resolution: "next@workspace:."
   dependencies:
     "@babel/core": "npm:^7.27.1"
     "@stylexjs/eslint-plugin": "npm:0.12.0"
