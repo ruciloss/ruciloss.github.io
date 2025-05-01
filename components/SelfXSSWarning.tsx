@@ -19,6 +19,5 @@ export default function SelfXSSWarning() {
 
         return () => {};
     }, []);
-
     return null;
 }
