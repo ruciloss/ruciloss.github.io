@@ -10,9 +10,11 @@ const styles = stylex.create({
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
+        maxWidth: "600px",
+        margin: "auto",
+        padding: "0 15px",
     },
     wrap: {
-        maxWidth: "600px",
         width: "100%",
         display: "flex",
         flexDirection: "column",
@@ -20,7 +22,6 @@ const styles = stylex.create({
         alignItems: "center",
         gap: "50px",
         textAlign: "center",
-        padding: "0 15px",
     },
     textMuted: {
         color: {
