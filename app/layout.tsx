@@ -8,7 +8,7 @@ const inter = Inter({
     subsets: ["latin"],
 });
 
-const DARK = "@media (prefers-color-scheme: dark)";
+const DARK = "@media (prefers-color-scheme: light)";
 
 const styles = stylex.create({
     html: {
