@@ -108,9 +108,12 @@ const styles = stylex.create({
         transition: "all .2s ease",
 
         ":hover": {
-            borderColor: "transparent",
-        },
-    },
+            borderColor: {
+                default: "transparent",
+                [DARK]: "transparent",
+},
+},
+},
 });
 
 export default function Homepage() {
