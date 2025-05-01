@@ -3,7 +3,6 @@
 /.pnp
 .pnp.js
 /.yarn
-/.husky
 
 # next.js
 /.next/
