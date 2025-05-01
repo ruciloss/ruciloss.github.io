@@ -111,9 +111,9 @@ const styles = stylex.create({
             borderColor: {
                 default: "transparent",
                 [DARK]: "transparent",
-},
-},
-},
+            },
+        },
+    },
 });
 
 export default function Homepage() {
