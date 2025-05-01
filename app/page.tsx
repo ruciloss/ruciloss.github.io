@@ -7,10 +7,9 @@ const styles = stylex.create({
     container: {
         display: "flex",
         flexDirection: "column",
-        justifyContent: "start",
+        justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        paddingTop: "20vh",
     },
     wrap: {
         maxWidth: "600px",
