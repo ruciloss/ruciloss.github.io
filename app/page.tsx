@@ -143,7 +143,7 @@ export default function Homepage() {
                         priority
                     />
                 </div>
-                                                                                                        <div>
+                <div>
                     A simple template for building modern websites with
                     <a
                         {...stylex.props(styles.link)}
