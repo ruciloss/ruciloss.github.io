@@ -22,11 +22,11 @@ Before you begin, ensure that you have the following installed on your machine:
 First, `yarn install` or `npm install` workspace.
 
 * **`yarn start`**: Starts the app in production mode after building.
-* **`yarn format`**: Formats all code files using Prettier.
+* **`yarn format`**: Formats all code files.
 * **`yarn lint`**: Lints the codebase for quality and consistency.
 * **`yarn dev`**: Starts the app in development mode with hot-reloading.
 * **`yarn build`**: Builds the app for production deployment.
-* **`yarn clean`**: Cleans the `.next` folder using Rimraf.
+* **`yarn clean`**: Cleans the .next folder.
 * **`yarn analyze`**: Builds the project and visualizes the bundle size.
 
 ## Contributing
