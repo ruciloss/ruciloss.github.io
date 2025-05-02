@@ -13,7 +13,7 @@ const styles = stylex.create({
         height: "100vh",
         maxWidth: "600px",
         margin: "auto",
-        padding: "0 15px",
+        padding: "15px",
     },
     card: {
         width: "100%",
