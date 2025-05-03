@@ -22,7 +22,6 @@ const nextConfig = {
     */
 
     transpilePackages: ["@stylexjs/open-props"],
-    eslint: { ignoreDuringBuilds: true },
 
     webpack: (config, { dev }) => {
         config.module.rules.push({
