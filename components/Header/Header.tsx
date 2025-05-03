@@ -12,7 +12,7 @@ export default function Header() {
                 width={180}
                 height={37}
             />
-            <div {...stylex.props(styles.headerDivider)}>&</div>
+            <div {...stylex.props(styles.headerDivider)}>+</div>
             <Image
                 {...stylex.props(styles.inverseImage)}
                 src="/stylex.svg"

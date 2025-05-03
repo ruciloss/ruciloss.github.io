@@ -8,7 +8,7 @@ export const styles = stylex.create({
         flexDirection: "column",
         justifyContent: "start",
         alignItems: "center",
-        gap: spacing.lg,
         textAlign: "center",
+        gap: spacing.lg,
     },
 });

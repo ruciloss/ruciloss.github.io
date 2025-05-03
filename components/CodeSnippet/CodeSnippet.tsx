@@ -21,13 +21,7 @@ export default function CodeSnippet() {
         <div {...stylex.props(styles.codeBlock)}>
             <div {...stylex.props(styles.codeHeader)}>
                 <div>bash</div>
-                <div
-                    style={{
-                        display: "flex",
-                        gap: "10px",
-                        alignItems: "center",
-                    }}
-                >
+                <div {...stylex.props(styles.codeHeaderActions)}>
                     <a
                         {...stylex.props(styles.githubLink)}
                         href="https://github.com/ruciloss/ruciloss.github.io"

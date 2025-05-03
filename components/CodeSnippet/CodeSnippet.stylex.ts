@@ -1,20 +1,16 @@
 import * as stylex from "@stylexjs/stylex";
-import { text } from "../../app/globalTokens.stylex";
+import { colors, fonts, text } from "../../app/globalTokens.stylex";
 
 const DARK = "@media (prefers-color-scheme: dark)";
 
 export const styles = stylex.create({
     codeBlock: {
-        backgroundColor: {
-            default: "#f3f4f6",
-            [DARK]: "#09090b",
-        },
         borderRadius: "9px",
         fontFamily: "monospace",
-        overflowX: "auto",
         borderStyle: "solid",
         borderWidth: "1px",
         borderColor: "#27272a",
+        width: "100%",
     },
     codeHeader: {
         display: "flex",
@@ -28,18 +24,17 @@ export const styles = stylex.create({
         borderTopLeftRadius: "9px",
         borderTopRightRadius: "9px",
         fontSize: text.xs,
-        color: {
-            default: "#111827",
-            [DARK]: "#d1d5db",
-        },
+        color: `rgba(${colors.textMutedR}, ${colors.textMutedG}, ${colors.textMutedB}, 1)`,
+    },
+    codeHeaderActions: {
+        display: "flex",
+        alignItems: "center",
+        gap: "15px",
     },
     codeContent: {
         padding: "12px 16px",
-        fontSize: text.sm,
-        color: {
-            default: "#111827",
-            [DARK]: "#e5e7eb",
-        },
+        overflowX: "auto",
+        fontFamily: fonts.mono,
     },
     githubLink: {
         display: "flex",

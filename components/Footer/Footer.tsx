@@ -1,6 +1,7 @@
 import Image from "next/image";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Footer.stylex";
+import Link from "@/components/Link/Link";
 
 export default function Footer() {
     return (
@@ -14,14 +15,12 @@ export default function Footer() {
                 />
                 <div>
                     Created by Ruciloss &copy; {new Date().getFullYear()} &bull;{" "}
-                    <a
-                        {...stylex.props(styles.link)}
+                    <Link
                         href="https://github.com/ruciloss/ruciloss.github.io/blob/master/LICENSE"
                         target="_blank"
-                        rel="noopener noreferrer"
                     >
                         License MIT
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

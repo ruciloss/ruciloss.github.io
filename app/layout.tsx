@@ -1,13 +1,8 @@
 import type { Metadata } from "next";
-import SelfXSSWarning from "@/components/SelfXSSWarning";
-import { Inter } from "next/font/google";
 import "./app.css";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./layout.stylex";
-
-const inter = Inter({
-    subsets: ["latin"],
-});
+import SelfXSSWarning from "@/components/SelfXSSWarning";
 
 export const metadata: Metadata = {
     title: "Next.js & StyleX",
@@ -28,10 +23,8 @@ export default function RootLayout({
             {...stylex.props(styles.html, styles.reset)}
         >
             <body {...stylex.props(styles.reset, styles.body)}>
-                <div className={inter.className}>
-                    {children}
-                    <SelfXSSWarning />
-                </div>
+                {children}
+                <SelfXSSWarning />
             </body>
         </html>
     );

@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { text, spacing } from "../../app/globalTokens.stylex";
+import { colors, spacing, text } from "../../app/globalTokens.stylex";
 
 const DARK = "@media (prefers-color-scheme: dark)";
 
@@ -18,10 +18,8 @@ export const styles = stylex.create({
         gap: spacing.lg,
     },
     headerDivider: {
-        fontSize: text.h2,
-        background: "linear-gradient(to right, purple, #00aaff)",
-        WebkitBackgroundClip: "text",
-        color: "transparent",
+        fontSize: text.h1,
+        color: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
     },
     inverseImage: {
         filter: {

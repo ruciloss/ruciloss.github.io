@@ -195,9 +195,8 @@ export const spacing = stylex.defineVars({
  */
 const DARK_MODE = "@media (prefers-color-scheme: dark)";
 
-export const globalTokens = stylex.defineVars({
-    maxWidth: `${MAX_WIDTH}px`,
-    fontMono: [
+export const fonts = stylex.defineVars({
+    mono: [
         "ui-monospace",
         "Menlo",
         "Monaco",
@@ -212,7 +211,7 @@ export const globalTokens = stylex.defineVars({
         '"Courier New"',
         "monospace",
     ].join(", "),
-    fontSans: [
+    sans: [
         "-apple-system",
         "BlinkMacSystemFont",
         '"Segoe UI"',
@@ -226,22 +225,28 @@ export const globalTokens = stylex.defineVars({
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
     ].join(", "),
+});
 
-    bgStartRGB: { default: "rgb(214, 219, 220)", [DARK_MODE]: "rgb(0, 0, 0)" },
+export const colors = stylex.defineVars({
+    foregroundR: { default: "63", [DARK_MODE]: "156" },
+    foregroundG: { default: "63", [DARK_MODE]: "163" },
+    foregroundB: { default: "70", [DARK_MODE]: "175" },
+
+    bgStartR: { default: "214", [DARK_MODE]: "20" },
+    bgStartG: { default: "219", [DARK_MODE]: "22" },
+    bgStartB: { default: "220", [DARK_MODE]: "27" },
 
     bgEndR: { default: "255", [DARK_MODE]: "0" },
     bgEndG: { default: "255", [DARK_MODE]: "0" },
     bgEndB: { default: "255", [DARK_MODE]: "0" },
-});
-
-export const colors = stylex.defineVars({
-    foregroundR: { default: "0", [DARK_MODE]: "255" },
-    foregroundG: { default: "0", [DARK_MODE]: "255" },
-    foregroundB: { default: "0", [DARK_MODE]: "255" },
 
     primaryR: { default: 0, [DARK_MODE]: 0 },
     primaryG: { default: 170, [DARK_MODE]: 170 },
     primaryB: { default: 255, [DARK_MODE]: 255 },
+
+    textMutedR: { default: 113, [DARK_MODE]: 82 },
+    textMutedG: { default: 113, [DARK_MODE]: 82 },
+    textMutedB: { default: 122, [DARK_MODE]: 91 },
 });
 
 export const scales = stylex.defineVars({
