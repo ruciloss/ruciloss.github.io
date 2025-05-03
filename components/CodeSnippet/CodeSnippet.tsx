@@ -3,73 +3,10 @@
 import Image from "next/image";
 import { useState } from "react";
 import * as stylex from "@stylexjs/stylex";
+import { styles } from "./CodeSnippet.stylex";
 
 const gitCommand =
     "git clone https://github.com/ruciloss/ruciloss.github.io.git";
-
-const DARK = "@media (prefers-color-scheme: dark)";
-
-const styles = stylex.create({
-    codeBlock: {
-        width: "100%",
-        backgroundColor: {
-            default: "#f3f4f6",
-            [DARK]: "#1f2937",
-        },
-        borderRadius: "8px",
-        fontFamily: "monospace",
-        overflowX: "auto",
-    },
-    codeHeader: {
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        backgroundColor: {
-            default: "#e5e7eb",
-            [DARK]: "#374151",
-        },
-        padding: "8px 12px",
-        borderTopLeftRadius: "8px",
-        borderTopRightRadius: "8px",
-        fontSize: "12px",
-        fontWeight: 600,
-        color: {
-            default: "#111827",
-            [DARK]: "#d1d5db",
-        },
-    },
-    codeContent: {
-        padding: "12px 16px",
-        fontSize: "14px",
-        color: {
-            default: "#111827",
-            [DARK]: "#e5e7eb",
-        },
-    },
-    githubLink: {
-        display: "flex",
-        alignItems: "center",
-        gap: "6px",
-        fontSize: "12px",
-        color: "#00aaff",
-        textDecoration: {
-            default: "none",
-            ":hover": "underline",
-        },
-    },
-    copyButton: {
-        cursor: "pointer",
-        padding: "4px 6px",
-        background: "transparent",
-        display: "flex",
-        alignItems: "center",
-    },
-    icon: {
-        width: "16px",
-        height: "16px",
-        fill: "#00aaff",
-    },
-});
 
 export default function CodeSnippet() {
     const [copied, setCopied] = useState(false);
@@ -83,7 +20,7 @@ export default function CodeSnippet() {
     return (
         <div {...stylex.props(styles.codeBlock)}>
             <div {...stylex.props(styles.codeHeader)}>
-                <span>bash</span>
+                <div>bash</div>
                 <div
                     style={{
                         display: "flex",
@@ -98,6 +35,7 @@ export default function CodeSnippet() {
                         rel="noopener noreferrer"
                     >
                         <Image
+                            {...stylex.props(styles.inverseImage)}
                             src="/github.svg"
                             alt="GitHub"
                             width={16}
@@ -109,7 +47,13 @@ export default function CodeSnippet() {
                         onClick={handleCopy}
                         aria-label="Copy to clipboard"
                     >
-                        {copied ? "✅" : "📝"}
+                        <Image
+                            {...stylex.props(styles.inverseImage)}
+                            src={copied ? "/check.svg" : "/copy.svg"}
+                            alt={copied ? "Copied" : "Copy"}
+                            width={16}
+                            height={16}
+                        />
                     </button>
                 </div>
             </div>

@@ -1,6 +1,10 @@
 import Image from "next/image";
 import * as stylex from "@stylexjs/stylex";
-import CodeSnippet from "@/components/CodeSnippet";
+import {
+    text,
+    spacing,
+} from "../app/globalTokens.stylex";
+import CodeSnippet from "@/components/CodeSnippet/CodeSnippet";
 
 const DARK = "@media (prefers-color-scheme: dark)";
 
@@ -13,7 +17,7 @@ const styles = stylex.create({
         height: "100vh",
         maxWidth: "600px",
         margin: "auto",
-        padding: "15px",
+        padding: `${spacing.lg} ${spacing.sm}`,
     },
     card: {
         width: "100%",
@@ -21,29 +25,19 @@ const styles = stylex.create({
         flexDirection: "column",
         justifyContent: "start",
         alignItems: "center",
-        gap: "50px",
+        gap: spacing.lg,
         textAlign: "center",
     },
-    textMuted: {
-        color: {
-            default: "#52525b",
-            [DARK]: "#a1a1aa",
-        },
-    },
     gitClone: {
-        fontSize: "14px",
         cursor: "pointer",
-    },
-    xs: {
-        fontSize: "12px",
     },
     link: {
         color: "#00aaff",
+        fontWeight: 600,
         textDecoration: {
             default: "none",
             ":hover": "underline",
         },
-        fontWeight: 600,
     },
     inverseImage: {
         filter: {
@@ -63,10 +57,10 @@ const styles = stylex.create({
             default: "start",
             "@media (min-width: 768px)": "center",
         },
-        gap: "30px",
+        gap: spacing.lg,
     },
-    divider: {
-        fontSize: "60px",
+    headerDivider: {
+        fontSize: text.h2,
         background: "linear-gradient(to right, purple, #00aaff)",
         WebkitBackgroundClip: "text",
         color: "transparent",
@@ -74,33 +68,13 @@ const styles = stylex.create({
     github: {
         display: "flex",
     },
-    actions: {
-        display: "flex",
-        flexDirection: {
-            default: "column",
-            "@media (min-width: 768px)": "row",
-        },
-        alignItems: "center",
-        justifyContent: {
-            default: "start",
-            "@media (min-width: 768px)": "center",
-        },
-        gap: "15px",
-        padding: "10px 15px",
-        borderStyle: "solid",
-        borderWidth: "1px",
-        borderColor: {
-            default: "red",
-            [DARK]: "blue",
-        },
-        borderRadius: "9px",
-    },
     badges: {
         display: "flex",
         alignItems: "center",
-        gap: "10px",
+        gap: spacing.xxs,
     },
     footer: {
+        fontSize: text.xs,
         display: "flex",
         flexDirection: {
             default: "column",
@@ -111,33 +85,17 @@ const styles = stylex.create({
             default: "start",
             "@media (min-width: 768px)": "center",
         },
-        gap: "10px",
-        marginTop: "10vh",
+        gap: spacing.sm,
+        marginTop: spacing.xxl,
+        color: {
+            default: "#52525b",
+            [DARK]: "#a1a1aa",
+        },
     },
     footerItem: {
         display: "flex",
         alignItems: "center",
-        gap: "10px",
-    },
-    button: {
-        display: "flex",
-        alignItems: "center",
-        gap: "10px",
-        textDecoration: "none",
-        borderRadius: "9px",
-        color: "#00aaff",
-        borderStyle: "solid",
-        borderWidth: "2px",
-        borderColor: "#00aaff",
-        transition: "all .2s ease",
-        padding: {
-            default: "10px 15px",
-            ":hover": "14px 18px",
-        },
-        margin: {
-            default: "4px 3px",
-            ":hover": "0",
-        },
+        gap: spacing.xxs,
     },
 });
 
@@ -154,7 +112,7 @@ export default function Homepage() {
                         height={37}
                     />
 
-                    <div {...stylex.props(styles.divider)}>&</div>
+                    <div {...stylex.props(styles.headerDivider)}>&</div>
 
                     <Image
                         {...stylex.props(styles.inverseImage)}
@@ -214,7 +172,7 @@ export default function Homepage() {
                             width={16}
                             height={16}
                         />
-                        <div {...stylex.props(styles.xs, styles.textMuted)}>
+                        <div>
                             Created by Ruciloss &copy;{" "}
                             {new Date().getFullYear()} &bull;{" "}
                             <a

@@ -257,29 +257,10 @@ export const globalTokens = stylex.defineVars({
     cardBorderR: { default: "131", [DARK_MODE]: "200" },
     cardBorderG: { default: "134", [DARK_MODE]: "200" },
     cardBorderB: { default: "135", [DARK_MODE]: "200" },
+});
 
-    primaryGlow: {
-        default: `conic-gradient(${[
-            "from 180deg at 50% 50%",
-            "#16abff33 0deg",
-            "#0885ff33 55deg",
-            "#54d6ff33 120deg",
-            "#0071ff33 160deg",
-            "transparent 360deg",
-        ].join(", ")})`,
-        [DARK_MODE]:
-            "radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0))",
-    },
-    secondaryGlow: {
-        default:
-            "radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))",
-        [DARK_MODE]: `linear-gradient(${[
-            "to bottom right",
-            "rgba(1, 65, 255, 0)",
-            "rgba(1, 65, 255, 0)",
-            "rgba(1, 65, 255, 0.3)",
-        ].join(", ")})`,
-    },
+export const colors = stylex.defineVars({
+    primary: "#00aaff",
 });
 
 export const scales = stylex.defineVars({

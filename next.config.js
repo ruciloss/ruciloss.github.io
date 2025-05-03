@@ -1,11 +1,9 @@
 // @type {import('next').NextConfig}
 const path = require("path");
 
-/*
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
     enabled: process.env.ANALYZE === "true",
 });
-*/
 
 const nextConfig = {
     poweredByHeader: false,
@@ -16,7 +14,7 @@ const nextConfig = {
             {
                 protocol: "https",
                 hostname: "ruciloss.github.io",
-                pathname: "/img/**",
+                pathname: "/**",
             },
         ],
     },
@@ -67,4 +65,4 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-// module.exports = withBundleAnalyzer(nextConfig);
+//module.exports = withBundleAnalyzer(nextConfig);
