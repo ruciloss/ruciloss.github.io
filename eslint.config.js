@@ -1,0 +1,11 @@
+module.exports = {
+    extends: [
+        "plugin:@next/next/recommended",
+        "next/core-web-vitals",
+        "next/typescript",
+    ],
+    plugins: ["@stylexjs"],
+    rules: {
+        "@stylexjs/valid-styles": "error",
+    },
+};
