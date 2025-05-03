@@ -7,7 +7,7 @@
         "build": "next build",
         "dev": "next dev",
         "lint": "next lint",
-        "format": "prettier --write \"**/*.{js,jsx,mjs,ts,tsx,json,css,scss,html,yml}\"",
+        "format": "prettier --write \"**/*.{js,mjs,jsx,ts,tsx,json,css,scss,yml}\"",
         "start": "next start",
         "analyze": "ANALYZE=true next build",
         "postinstall": "husky",
