@@ -20,6 +20,7 @@ const nextConfig: NextConfig = {
             },
         ],
     },
+
     /*
     i18n: {
         locales: ['en', 'cs'],
