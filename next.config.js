@@ -1,18 +1,11 @@
-import path from "path";
-import { fileURLToPath } from "url";
-import type { NextConfig } from "next";
-//import withBundleAnalyzerInit from "@next/bundle-analyzer";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+// @type {import('next').NextConfig}
+const path = require("path");
 /*
-const withBundleAnalyzer = withBundleAnalyzerInit({
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
     enabled: process.env.ANALYZE === "true",
 });
 */
-
-const nextConfig: NextConfig = {
+const nextConfig = {
     poweredByHeader: false,
     output: "export",
     images: {
@@ -25,7 +18,6 @@ const nextConfig: NextConfig = {
             },
         ],
     },
-
     /*
     i18n: {
         locales: ['en', 'cs'],
@@ -34,8 +26,9 @@ const nextConfig: NextConfig = {
     */
 
     transpilePackages: ["@stylexjs/open-props"],
+    eslint: { ignoreDuringBuilds: true },
 
-    webpack: (config, { dev, isServer }) => {
+    webpack: (config, { dev }) => {
         config.module.rules.push({
             test: /\.(js|jsx|ts|tsx)$/,
             exclude: /node_modules(?!\/@stylexjs\/open-props)/,
@@ -71,5 +64,5 @@ const nextConfig: NextConfig = {
     },
 };
 
-//export default withBundleAnalyzer(nextConfig);
-export default nextConfig;
+module.exports = nextConfig;
+//module.exports = withBundleAnalyzer(nextConfig);
