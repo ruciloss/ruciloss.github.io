@@ -7,10 +7,7 @@ export const styles = stylex.create({
     wrapper: {
         display: "flex",
         alignItems: "center",
-        gap: {
-            default: spacing.md,
-            "@media (min-width: 768px)": spacing.lg,
-        },
+        gap: spacing.md,
         flexDirection: {
             default: "column",
             "@media (min-width: 768px)": "row",

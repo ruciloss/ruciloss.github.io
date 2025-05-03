@@ -1,12 +1,46 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./CodeSnippet.stylex";
 
 const gitCommand =
     "git clone https://github.com/ruciloss/ruciloss.github.io.git";
+
+// ✅ Copy ikona jako komponenta
+const CopyIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+    </svg>
+);
+
+// ✅ Check ikona jako komponenta
+const CheckIcon = () => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+    >
+        <path d="M20 6 9 17l-5-5" />
+    </svg>
+);
 
 export default function CodeSnippet() {
     const [copied, setCopied] = useState(false);
@@ -27,13 +61,7 @@ export default function CodeSnippet() {
                         onClick={handleCopy}
                         aria-label="Copy to clipboard"
                     >
-                        <Image
-                            {...stylex.props(styles.inverseImage)}
-                            src={copied ? "/check.svg" : "/copy.svg"}
-                            alt={copied ? "Copied" : "Copy"}
-                            width={16}
-                            height={16}
-                        />
+                        <span>{copied ? <CheckIcon /> : <CopyIcon />}</span>
                         {copied ? "Copied!" : "Copy"}
                     </button>
                 </div>

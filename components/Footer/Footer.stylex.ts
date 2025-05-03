@@ -1,8 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 import { colors, spacing, text } from "../../app/globalTokens.stylex";
 
-const DARK = "@media (prefers-color-scheme: dark)";
-
 export const styles = stylex.create({
     wrapper: {
         fontSize: text.xs,
@@ -27,11 +25,7 @@ export const styles = stylex.create({
             ":hover": "underline",
         },
     },
-    inverseImage: {
-        filter: {
-            default:
-                "invert(0%) sepia(3%) saturate(0%) hue-rotate(213deg) brightness(95%) contrast(103%)",
-            [DARK]: "invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%)",
-        },
+    linkIcon: {
+        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
     },
 });

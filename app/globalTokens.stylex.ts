@@ -230,9 +230,9 @@ export const colors = stylex.defineVars({
     dangerG: { default: 68, [DARK_MODE]: 68 },
     dangerB: { default: 68, [DARK_MODE]: 68 },
 
-    borderR: { default: 212, [DARK_MODE]: 24 },
-    borderG: { default: 212, [DARK_MODE]: 24 },
-    borderB: { default: 216, [DARK_MODE]: 27 },
+    borderR: { default: 161, [DARK_MODE]: 39 },
+    borderG: { default: 161, [DARK_MODE]: 39 },
+    borderB: { default: 170, [DARK_MODE]: 42 },
 });
 
 export const fonts = stylex.defineVars({
