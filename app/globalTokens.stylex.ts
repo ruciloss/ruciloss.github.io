@@ -227,40 +227,21 @@ export const globalTokens = stylex.defineVars({
         '"Noto Color Emoji"',
     ].join(", "),
 
-    foregroundR: { default: "0", [DARK_MODE]: "255" },
-    foregroundG: { default: "0", [DARK_MODE]: "255" },
-    foregroundB: { default: "0", [DARK_MODE]: "255" },
-
     bgStartRGB: { default: "rgb(214, 219, 220)", [DARK_MODE]: "rgb(0, 0, 0)" },
 
     bgEndR: { default: "255", [DARK_MODE]: "0" },
     bgEndG: { default: "255", [DARK_MODE]: "0" },
     bgEndB: { default: "255", [DARK_MODE]: "0" },
-
-    calloutRGB: {
-        default: "rgb(238, 240, 241)",
-        [DARK_MODE]: "rgb(20, 20, 20)",
-    },
-    calloutRGB50: {
-        default: "rgba(238, 240, 241, 0.5)",
-        [DARK_MODE]: "rgba(20, 20, 20, 0.5)",
-    },
-
-    calloutBorderR: { default: "172", [DARK_MODE]: "108" },
-    calloutBorderG: { default: "175", [DARK_MODE]: "108" },
-    calloutBorderB: { default: "176", [DARK_MODE]: "108" },
-
-    cardR: { default: "180", [DARK_MODE]: "100" },
-    cardG: { default: "185", [DARK_MODE]: "100" },
-    cardB: { default: "188", [DARK_MODE]: "100" },
-
-    cardBorderR: { default: "131", [DARK_MODE]: "200" },
-    cardBorderG: { default: "134", [DARK_MODE]: "200" },
-    cardBorderB: { default: "135", [DARK_MODE]: "200" },
 });
 
 export const colors = stylex.defineVars({
-    primary: "#00aaff",
+    foregroundR: { default: "0", [DARK_MODE]: "255" },
+    foregroundG: { default: "0", [DARK_MODE]: "255" },
+    foregroundB: { default: "0", [DARK_MODE]: "255" },
+
+    primaryR: { default: 0, [DARK_MODE]: 0 },
+    primaryG: { default: 170, [DARK_MODE]: 170 },
+    primaryB: { default: 255, [DARK_MODE]: 255 },
 });
 
 export const scales = stylex.defineVars({

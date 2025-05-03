@@ -1,27 +1,16 @@
-import * as stylex from "@stylexjs/stylex";
-import { styles } from "./Description.stylex";
+import Link from "@/components/Link/Link";
 
 export default function Description() {
     return (
         <div>
             A simple template for building modern websites with{" "}
-            <a
-                {...stylex.props(styles.link)}
-                href="https://nextjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <Link href="https://nextjs.org" target="_blank">
                 Next.js
-            </a>{" "}
+            </Link>{" "}
             and{" "}
-            <a
-                {...stylex.props(styles.link)}
-                href="https://stylexjs.com"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <Link href="https://stylexjs.com" target="_blank">
                 StyleX
-            </a>
+            </Link>
             , designed for fast development and easy customization.
         </div>
     );
