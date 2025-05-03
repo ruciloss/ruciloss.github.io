@@ -1,9 +1,6 @@
 import Image from "next/image";
 import * as stylex from "@stylexjs/stylex";
-import {
-    text,
-    spacing,
-} from "../app/globalTokens.stylex";
+import { text, spacing } from "../app/globalTokens.stylex";
 import CodeSnippet from "@/components/CodeSnippet/CodeSnippet";
 
 const DARK = "@media (prefers-color-scheme: dark)";
