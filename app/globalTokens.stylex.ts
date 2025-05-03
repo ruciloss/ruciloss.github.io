@@ -193,7 +193,7 @@ export const spacing = stylex.defineVars({
 /**
  * Color Tokens
  */
-const DARK_MODE = "@media (prefers-color-scheme: light)";
+const DARK_MODE = "@media (prefers-color-scheme: dark)";
 
 export const globalTokens = stylex.defineVars({
     maxWidth: `${MAX_WIDTH}px`,
