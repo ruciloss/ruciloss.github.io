@@ -6,8 +6,8 @@ export const styles = stylex.create({
         color: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
         fontWeight: 600,
         textDecoration: {
-            default: "none",
-            ":hover": "underline",
+            default: "underline",
+            ":hover": "none",
         },
     },
 });

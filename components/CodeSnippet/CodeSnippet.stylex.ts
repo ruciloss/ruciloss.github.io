@@ -1,55 +1,45 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, fonts, text } from "../../app/globalTokens.stylex";
+import { colors, fonts, spacing, text } from "../../app/globalTokens.stylex";
 
 const DARK = "@media (prefers-color-scheme: dark)";
 
 export const styles = stylex.create({
-    codeBlock: {
+    wrapper: {
         borderRadius: "9px",
         fontFamily: "monospace",
-        borderStyle: "solid",
+        borderStyle: "dotted",
         borderWidth: "1px",
-        borderColor: "#27272a",
-        width: "100%",
+        borderColor: `rgba(${colors.borderR}, ${colors.borderG}, ${colors.borderB}, 1)`,
+        fontSize: text.xs,
     },
-    codeHeader: {
+    header: {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        backgroundColor: {
-            default: "#e5e7eb",
-            [DARK]: "#18181b",
-        },
-        padding: "10px 12px",
+        padding: `${spacing.xxs} ${spacing.xs}`,
         borderTopLeftRadius: "9px",
         borderTopRightRadius: "9px",
-        fontSize: text.xs,
-        color: `rgba(${colors.textMutedR}, ${colors.textMutedG}, ${colors.textMutedB}, 1)`,
+        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
     },
-    codeHeaderActions: {
+    actions: {
         display: "flex",
         alignItems: "center",
-        gap: "15px",
+        gap: spacing.xxs,
     },
-    codeContent: {
-        padding: "12px 16px",
-        overflowX: "auto",
+    code: {
+        padding: `${spacing.xs} ${spacing.sm}`,
         fontFamily: fonts.mono,
     },
-    githubLink: {
-        display: "flex",
-    },
-    copyButton: {
+    button: {
         cursor: "pointer",
-        background: "transparent",
         display: "flex",
         alignItems: "center",
+        gap: spacing.xxs,
+        backgroundColor: "transparent",
         borderWidth: 0,
-    },
-    icon: {
-        width: "16px",
-        height: "16px",
-        fill: "#00aaff",
+        textDecoration: "none",
+        fontSize: text.xs,
+        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
     },
     inverseImage: {
         filter: {

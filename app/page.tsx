@@ -2,7 +2,7 @@ import Container from "@/components/Container/Container";
 import Card from "@/components/Card/Card";
 import Header from "@/components/Header/Header";
 import Badges from "@/components/Badges/badges";
-import Description from "@/components/Description/Description";
+import Content from "@/components/Content/Content";
 import CodeSnippet from "@/components/CodeSnippet/CodeSnippet";
 import Footer from "@/components/Footer/Footer";
 
@@ -12,7 +12,7 @@ export default function Homepage() {
             <Card>
                 <Header />
                 <Badges />
-                <Description />
+                <Content />
                 <CodeSnippet />
                 <Footer />
             </Card>

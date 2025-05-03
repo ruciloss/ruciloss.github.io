@@ -37,6 +37,7 @@ const MIN_FONT = {
     h2: Math.round((MIN_BASE_SIZE * Math.pow(MIN_SCALE, 4)) / 0.16) / 100,
     h1: Math.round((MIN_BASE_SIZE * Math.pow(MIN_SCALE, 5)) / 0.16) / 100,
 };
+
 // Font sizes in `rem` units
 const MAX_FONT = {
     xxs: Math.round(MAX_BASE_SIZE / Math.pow(MAX_SCALE, 3) / 0.16) / 100,
@@ -49,6 +50,7 @@ const MAX_FONT = {
     h2: Math.round((MAX_BASE_SIZE * Math.pow(MAX_SCALE, 4)) / 0.16) / 100,
     h1: Math.round((MAX_BASE_SIZE * Math.pow(MAX_SCALE, 5)) / 0.16) / 100,
 };
+
 const SLOPE = {
     xxs: (16 * (MAX_FONT.xxs - MIN_FONT.xxs)) / (MAX_WIDTH - MIN_WIDTH),
     xs: (16 * (MAX_FONT.xs - MIN_FONT.xs)) / (MAX_WIDTH - MIN_WIDTH),
@@ -60,6 +62,7 @@ const SLOPE = {
     h2: (16 * (MAX_FONT.h2 - MIN_FONT.h2)) / (MAX_WIDTH - MIN_WIDTH),
     h1: (16 * (MAX_FONT.h1 - MIN_FONT.h1)) / (MAX_WIDTH - MIN_WIDTH),
 };
+
 const INTERCEPT = {
     xxs: Math.round(100 * (MIN_FONT.xxs - SLOPE.xxs * (MIN_WIDTH / 16))) / 100,
     xs: Math.round(100 * (MIN_FONT.xs - SLOPE.xs * (MIN_WIDTH / 16))) / 100,
@@ -112,7 +115,6 @@ export const text = stylex.defineVars({
  * Users that prefer larger text, don't necessarily want larger spacing as well.
  *
  */
-
 const MULT = {
     xxxs: 0.25,
     xxs: 0.5,
@@ -125,6 +127,7 @@ const MULT = {
     xxxl: 6,
     xxxxl: 8,
 };
+
 const MIN_SPACE = {
     xxxs: MULT.xxxs * MIN_BASE_SIZE,
     xxs: MULT.xxs * MIN_BASE_SIZE,
@@ -137,6 +140,7 @@ const MIN_SPACE = {
     xxxl: MULT.xxxl * MIN_BASE_SIZE,
     xxxxl: MULT.xxxxl * MIN_BASE_SIZE,
 };
+
 const MAX_SPACE = {
     xxxs: MULT.xxxs * MAX_BASE_SIZE,
     xxs: MULT.xxs * MAX_BASE_SIZE,
@@ -149,6 +153,7 @@ const MAX_SPACE = {
     xxxl: MULT.xxxl * MAX_BASE_SIZE,
     xxxxl: MULT.xxxxl * MAX_BASE_SIZE,
 };
+
 const SLOPE_SPACE = {
     xxxs: (MAX_SPACE.xxxs - MIN_SPACE.xxxs) / (MAX_WIDTH - MIN_WIDTH),
     xxs: (MAX_SPACE.xxs - MIN_SPACE.xxs) / (MAX_WIDTH - MIN_WIDTH),
@@ -161,6 +166,7 @@ const SLOPE_SPACE = {
     xxxl: (MAX_SPACE.xxxl - MIN_SPACE.xxxl) / (MAX_WIDTH - MIN_WIDTH),
     xxxxl: (MAX_SPACE.xxxxl - MIN_SPACE.xxxxl) / (MAX_WIDTH - MIN_WIDTH),
 };
+
 // rounded to the nearest 0.25px
 const INTERCEPT_SPACE = {
     xxxs: Math.round(4 * (MIN_SPACE.xxxs - SLOPE_SPACE.xxxs * MIN_WIDTH)) / 4,
@@ -191,9 +197,43 @@ export const spacing = stylex.defineVars({
 });
 
 /**
- * Color Tokens
+ * Global Tokens
  */
 const DARK_MODE = "@media (prefers-color-scheme: dark)";
+
+export const colors = stylex.defineVars({
+    foregroundR: { default: "63", [DARK_MODE]: "161" },
+    foregroundG: { default: "63", [DARK_MODE]: "161" },
+    foregroundB: { default: "70", [DARK_MODE]: "170" },
+
+    bgStartR: { default: "214", [DARK_MODE]: "20" },
+    bgStartG: { default: "219", [DARK_MODE]: "22" },
+    bgStartB: { default: "220", [DARK_MODE]: "27" },
+
+    bgEndR: { default: "255", [DARK_MODE]: "0" },
+    bgEndG: { default: "255", [DARK_MODE]: "0" },
+    bgEndB: { default: "255", [DARK_MODE]: "0" },
+
+    primaryR: { default: 0, [DARK_MODE]: 0 },
+    primaryG: { default: 170, [DARK_MODE]: 170 },
+    primaryB: { default: 255, [DARK_MODE]: 255 },
+
+    blackWhiteR: { default: 9, [DARK_MODE]: 250 },
+    blackWhiteG: { default: 9, [DARK_MODE]: 250 },
+    blackWhiteB: { default: 11, [DARK_MODE]: 250 },
+
+    textMutedR: { default: 113, [DARK_MODE]: 113 },
+    textMutedG: { default: 113, [DARK_MODE]: 113 },
+    textMutedB: { default: 122, [DARK_MODE]: 122 },
+
+    dangerR: { default: 239, [DARK_MODE]: 239 },
+    dangerG: { default: 68, [DARK_MODE]: 68 },
+    dangerB: { default: 68, [DARK_MODE]: 68 },
+
+    borderR: { default: 212, [DARK_MODE]: 24 },
+    borderG: { default: 212, [DARK_MODE]: 24 },
+    borderB: { default: 216, [DARK_MODE]: 27 },
+});
 
 export const fonts = stylex.defineVars({
     mono: [
@@ -225,28 +265,6 @@ export const fonts = stylex.defineVars({
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
     ].join(", "),
-});
-
-export const colors = stylex.defineVars({
-    foregroundR: { default: "63", [DARK_MODE]: "156" },
-    foregroundG: { default: "63", [DARK_MODE]: "163" },
-    foregroundB: { default: "70", [DARK_MODE]: "175" },
-
-    bgStartR: { default: "214", [DARK_MODE]: "20" },
-    bgStartG: { default: "219", [DARK_MODE]: "22" },
-    bgStartB: { default: "220", [DARK_MODE]: "27" },
-
-    bgEndR: { default: "255", [DARK_MODE]: "0" },
-    bgEndG: { default: "255", [DARK_MODE]: "0" },
-    bgEndB: { default: "255", [DARK_MODE]: "0" },
-
-    primaryR: { default: 0, [DARK_MODE]: 0 },
-    primaryG: { default: 170, [DARK_MODE]: 170 },
-    primaryB: { default: 255, [DARK_MODE]: 255 },
-
-    textMutedR: { default: 113, [DARK_MODE]: 82 },
-    textMutedG: { default: 113, [DARK_MODE]: 82 },
-    textMutedB: { default: 122, [DARK_MODE]: 91 },
 });
 
 export const scales = stylex.defineVars({

@@ -4,7 +4,7 @@ import { styles } from "./Header.stylex";
 
 export default function Header() {
     return (
-        <div {...stylex.props(styles.header)}>
+        <div {...stylex.props(styles.wrapper)}>
             <Image
                 {...stylex.props(styles.inverseImage)}
                 src="/next.svg"
@@ -12,7 +12,7 @@ export default function Header() {
                 width={180}
                 height={37}
             />
-            <div {...stylex.props(styles.headerDivider)}>+</div>
+            <span>with</span>
             <Image
                 {...stylex.props(styles.inverseImage)}
                 src="/stylex.svg"

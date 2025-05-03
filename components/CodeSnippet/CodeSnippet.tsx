@@ -18,26 +18,12 @@ export default function CodeSnippet() {
     };
 
     return (
-        <div {...stylex.props(styles.codeBlock)}>
-            <div {...stylex.props(styles.codeHeader)}>
-                <div>bash</div>
-                <div {...stylex.props(styles.codeHeaderActions)}>
-                    <a
-                        {...stylex.props(styles.githubLink)}
-                        href="https://github.com/ruciloss/ruciloss.github.io"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <Image
-                            {...stylex.props(styles.inverseImage)}
-                            src="/github.svg"
-                            alt="GitHub"
-                            width={16}
-                            height={16}
-                        />
-                    </a>
+        <div {...stylex.props(styles.wrapper)}>
+            <div {...stylex.props(styles.header)}>
+                <span>bash</span>
+                <div {...stylex.props(styles.actions)}>
                     <button
-                        {...stylex.props(styles.copyButton)}
+                        {...stylex.props(styles.button)}
                         onClick={handleCopy}
                         aria-label="Copy to clipboard"
                     >
@@ -48,10 +34,11 @@ export default function CodeSnippet() {
                             width={16}
                             height={16}
                         />
+                        {copied ? "Copied!" : "Copy"}
                     </button>
                 </div>
             </div>
-            <div {...stylex.props(styles.codeContent)}>{gitCommand}</div>
+            <p {...stylex.props(styles.code)}>{gitCommand}</p>
         </div>
     );
 }

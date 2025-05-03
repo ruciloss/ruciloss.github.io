@@ -1,25 +1,24 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing, text } from "../../app/globalTokens.stylex";
+import { spacing } from "../../app/globalTokens.stylex";
 
 const DARK = "@media (prefers-color-scheme: dark)";
 
 export const styles = stylex.create({
-    header: {
+    wrapper: {
         display: "flex",
+        alignItems: "center",
+        gap: {
+            default: spacing.md,
+            "@media (min-width: 768px)": spacing.lg,
+        },
         flexDirection: {
             default: "column",
             "@media (min-width: 768px)": "row",
         },
-        alignItems: "center",
         justifyContent: {
             default: "start",
             "@media (min-width: 768px)": "center",
         },
-        gap: spacing.lg,
-    },
-    headerDivider: {
-        fontSize: text.h1,
-        color: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
     },
     inverseImage: {
         filter: {
