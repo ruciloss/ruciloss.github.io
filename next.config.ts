@@ -1,13 +1,18 @@
 import path from "path";
 import { fileURLToPath } from "url";
-import withBundleAnalyzerInit from "@next/bundle-analyzer";
+import type { NextConfig } from "next";
+//import withBundleAnalyzerInit from "@next/bundle-analyzer";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const useStaticMode = true;
+/*
+const withBundleAnalyzer = withBundleAnalyzerInit({
+    enabled: process.env.ANALYZE === "true",
+});
+*/
 
-let nextConfig = {
+const nextConfig: NextConfig = {
     poweredByHeader: false,
     output: "export",
     images: {
@@ -22,7 +27,6 @@ let nextConfig = {
     },
 
     transpilePackages: ["@stylexjs/open-props"],
-    eslint: { ignoreDuringBuilds: true },
 
     webpack: (config, { dev }) => {
         config.module.rules.push({
@@ -60,12 +64,5 @@ let nextConfig = {
     },
 };
 
-if (useStaticMode === false) {
-    const withBundleAnalyzer = withBundleAnalyzerInit({
-        enabled: process.env.ANALYZE === "true",
-    });
-
-    nextConfig = withBundleAnalyzer(nextConfig);
-}
-
+//export default withBundleAnalyzer(nextConfig);
 export default nextConfig;
