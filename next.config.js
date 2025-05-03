@@ -12,13 +12,6 @@ const nextConfig = {
     output: "export",
     images: {
         unoptimized: true,
-        remotePatterns: [
-            {
-                protocol: "https",
-                hostname: "ruciloss.github.io",
-                pathname: "/**",
-            },
-        ],
     },
 
     /*
