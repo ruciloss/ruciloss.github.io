@@ -272,7 +272,13 @@ export const fonts = stylex.defineVars({
 });
 
 export const scales = stylex.defineVars({
-    small: "scale(0.95)",
-    medium: "scale(1)",
-    large: "scale(1.2)",
+    sm: "scale(0.95)",
+    md: "scale(1)",
+    lg: "scale(1.2)",
+});
+
+export const radius = stylex.defineVars({
+    sm: "3px",
+    md: "6px",
+    lg: "9px",
 });

@@ -1,9 +1,15 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, fonts, spacing, text } from "../../app/globalTokens.stylex";
+import {
+    colors,
+    fonts,
+    radius,
+    spacing,
+    text,
+} from "../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
     wrapper: {
-        borderRadius: "9px",
+        borderRadius: radius.lg,
         fontFamily: "monospace",
         borderStyle: "solid",
         borderWidth: "1px",
@@ -19,8 +25,8 @@ export const styles = stylex.create({
         justifyContent: "space-between",
         alignItems: "center",
         padding: `${spacing.xxs} ${spacing.xs}`,
-        borderTopLeftRadius: "9px",
-        borderTopRightRadius: "9px",
+        borderTopLeftRadius: radius.lg,
+        borderTopRightRadius: radius.lg,
         backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
         color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
     },

@@ -50,7 +50,7 @@ export default function Footer() {
                 </a>
                 <span>&mdash;</span>
                 <a
-                    {...stylex.props(styles.linkIcon)}
+                    {...stylex.props(styles.link)}
                     href="https://github.com/ruciloss/ruciloss.github.io"
                     target="_blank"
                     rel="noopener noreferrer"

@@ -19,13 +19,11 @@ export const styles = stylex.create({
         gap: spacing.xxs,
     },
     link: {
+        display: "flex",
         color: `rgba(${colors.textMutedR}, ${colors.textMutedG}, ${colors.textMutedB}, 1)`,
         textDecoration: {
             default: "none",
             ":hover": "underline",
         },
-    },
-    linkIcon: {
-        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
     },
 });
