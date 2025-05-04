@@ -4,10 +4,9 @@ import { useState } from "react";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./CodeSnippet.stylex";
 
-const gitCommand =
+const gitCommand: string =
     "git clone https://github.com/ruciloss/ruciloss.github.io.git";
 
-// ✅ Copy ikona jako komponenta
 const CopyIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +24,6 @@ const CopyIcon = () => (
     </svg>
 );
 
-// ✅ Check ikona jako komponenta
 const CheckIcon = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -43,16 +41,16 @@ const CheckIcon = () => (
 );
 
 export default function CodeSnippet() {
-    const [copied, setCopied] = useState(false);
+    const [copied, setCopied] = useState<boolean>(false);
 
-    const handleCopy = async () => {
+    const handleCopy = async (): Promise<void> => {
         await navigator.clipboard.writeText(gitCommand);
         setCopied(true);
         setTimeout(() => setCopied(false), 1500);
     };
 
     return (
-        <div {...stylex.props(styles.wrapper)}>
+        <pre {...stylex.props(styles.wrapper)}>
             <div {...stylex.props(styles.header)}>
                 <span>bash</span>
                 <div {...stylex.props(styles.actions)}>
@@ -66,7 +64,7 @@ export default function CodeSnippet() {
                     </button>
                 </div>
             </div>
-            <p {...stylex.props(styles.code)}>{gitCommand}</p>
-        </div>
+            <span {...stylex.props(styles.code)}>{gitCommand}</span>
+        </pre>
     );
 }

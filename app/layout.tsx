@@ -3,6 +3,8 @@ import "./app.css";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./layout.stylex";
 import SelfXSSWarning from "@/components/SelfXSSWarning";
+import ThemeProvider from "@/components/ThemeProvider/ThemeProvider";
+import Wrapper from "@/components/Wrapper/Wrapper";
 
 export const metadata: Metadata = {
     title: "Next.js & StyleX",
@@ -23,8 +25,12 @@ export default function RootLayout({
             {...stylex.props(styles.html, styles.reset)}
         >
             <body {...stylex.props(styles.reset, styles.body)}>
-                {children}
-                <SelfXSSWarning />
+                <ThemeProvider>
+                    <Wrapper>
+                        {children}
+                        <SelfXSSWarning />
+                    </Wrapper>
+                </ThemeProvider>
             </body>
         </html>
     );

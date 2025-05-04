@@ -29,7 +29,7 @@ const GitHubIcon = () => (
 
 export default function Footer() {
     return (
-        <div {...stylex.props(styles.wrapper)}>
+        <footer {...stylex.props(styles.wrapper)}>
             <div {...stylex.props(styles.item)}>
                 <Image
                     src="/logo.svg"
@@ -58,6 +58,6 @@ export default function Footer() {
                     <GitHubIcon />
                 </a>
             </div>
-        </div>
+        </footer>
     );
 }

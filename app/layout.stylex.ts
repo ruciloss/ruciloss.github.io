@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, fonts, text } from "./globalTokens.stylex";
+import { fonts, text } from "./globalTokens.stylex";
 
 export const styles = stylex.create({
     html: {
@@ -16,7 +16,5 @@ export const styles = stylex.create({
         fontSize: text.sm,
         fontWeight: 400,
         lineHeight: 1.5,
-        color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,
-        backgroundImage: `linear-gradient(to bottom, rgb(${colors.bgStartR}, ${colors.bgStartG}, ${colors.bgStartB}), rgb(${colors.bgEndR}, ${colors.bgEndG}, ${colors.bgEndB}))`,
     },
 });

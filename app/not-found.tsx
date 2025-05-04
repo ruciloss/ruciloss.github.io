@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Container from "@/components/Container/Container";
+import { useRouter } from "next/navigation";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./not-found.stylex";
-import { useRouter } from "next/navigation";
+import Container from "@/components/Container/Container";
 
 export default function NotFound() {
-    const [countdown, setCountdown] = useState(10);
+    const [countdown, setCountdown] = useState(100);
     const router = useRouter();
 
     useEffect(() => {
