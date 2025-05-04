@@ -4,7 +4,7 @@ import { styles } from "./Header.stylex";
 
 export default function Header() {
     return (
-        <header {...stylex.props(styles.wrapper)}>
+        <div {...stylex.props(styles.wrapper)}>
             <Image
                 {...stylex.props(styles.inverseImage)}
                 src="/next.svg"
@@ -20,6 +20,6 @@ export default function Header() {
                 width={140}
                 height={95}
             />
-        </header>
+        </div>
     );
 }

@@ -7,7 +7,7 @@ import { styles } from "./not-found.stylex";
 import Container from "@/components/Container/Container";
 
 export default function NotFound() {
-    const [countdown, setCountdown] = useState(100);
+    const [countdown, setCountdown] = useState(10);
     const router = useRouter();
 
     useEffect(() => {
