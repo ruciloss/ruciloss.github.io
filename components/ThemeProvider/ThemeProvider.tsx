@@ -2,26 +2,14 @@
 
 import * as stylex from "@stylexjs/stylex";
 import { light, dark } from "@/app/themes";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function ThemeProvider({
     children,
 }: {
     children: React.ReactNode;
 }) {
-    // Načteme téma z localStorage nebo použijeme "auto" jako výchozí
-    const storedTheme = localStorage.getItem("theme");
-    const [theme, setTheme] = useState<string>(storedTheme || "system");
-
-    useEffect(() => {
-        if (theme !== "system") {
-            // Uložíme téma do localStorage, když se změní
-            localStorage.setItem("theme", theme);
-        } else {
-            // Pokud je téma auto, vymažeme z localStorage (necháme systémové téma)
-            localStorage.removeItem("theme");
-        }
-    }, [theme]);
+    const [theme, setTheme] = useState<string>("system");
 
     const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
         setTheme(event.target.value);
