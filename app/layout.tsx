@@ -12,11 +12,7 @@ export const metadata: Metadata = {
         "A simple template for building modern websites with Next.js & StyleX.",
 };
 
-export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode;
-}) {
+export default function Root({ children }: { children: React.ReactNode }) {
     return (
         <html
             id="next"
