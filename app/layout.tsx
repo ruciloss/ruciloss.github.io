@@ -3,9 +3,10 @@
 import "./app.css";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./layout.stylex";
-import SelfXSSWarning from "@/components/SelfXSSWarning";
 import { useState } from "react";
 import { light, dark } from "./themes";
+import SelfXSSWarning from "@/components/SelfXSSWarning";
+import Appbar from "@/components/Appbar/Appbar";
 
 export default function Root({ children }: { children: React.ReactNode }) {
     const [theme, setTheme] = useState<string>("system");
@@ -29,6 +30,9 @@ export default function Root({ children }: { children: React.ReactNode }) {
             )}
         >
             <body {...stylex.props(styles.reset, styles.body)}>
+                <Appbar>
+                    <h1>Ruciloss</h1>
+                </Appbar>
                 {children}
                 <select
                     value={theme}

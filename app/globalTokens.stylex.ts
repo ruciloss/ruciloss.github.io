@@ -214,9 +214,9 @@ export const colors = stylex.defineVars({
     bgEndG: { default: "255", [DARK_MODE]: "0" },
     bgEndB: { default: "255", [DARK_MODE]: "0" },
 
-    bgSecondaryR: { default: "228", [DARK_MODE]: "24" },
-    bgSecondaryG: { default: "228", [DARK_MODE]: "24" },
-    bgSecondaryB: { default: "231", [DARK_MODE]: "27" },
+    bgSecondaryR: { default: "255", [DARK_MODE]: "24" },
+    bgSecondaryG: { default: "255", [DARK_MODE]: "24" },
+    bgSecondaryB: { default: "255", [DARK_MODE]: "27" },
 
     primaryR: { default: "0", [DARK_MODE]: "0" },
     primaryG: { default: "170", [DARK_MODE]: "170" },
