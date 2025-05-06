@@ -1,4 +1,4 @@
-# Next.js & StyleX
+# NexteX
 
 ![Badge](https://img.shields.io/badge/License-MIT-blue)
 ![Badge](https://img.shields.io/badge/Version-1.0.0-orange)
@@ -31,6 +31,6 @@ First, `yarn install` or `npm install` workspace.
 
 ## Contributing
 
-Next.js & StyleX is under [MIT License](./LICENSE)
+NexteX is under [MIT License](./LICENSE)
 
 Created by [Ruciloss](https://github.com/ruciloss)
