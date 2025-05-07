@@ -3,17 +3,21 @@
 import "./app.css";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./layout.stylex";
-import { useState } from "react";
+import { ThemeProvider, useTheme } from "@/contexts/ThemeContext";
 import { light, dark } from "./themes";
 import SelfXSSWarning from "@/components/SelfXSSWarning";
 import Appbar from "@/components/Appbar/Appbar";
 
 export default function Root({ children }: { children: React.ReactNode }) {
-    const [theme, setTheme] = useState<string>("system");
+    return (
+        <ThemeProvider>
+            <RootLayout>{children}</RootLayout>
+        </ThemeProvider>
+    );
+}
 
-    const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-        setTheme(event.target.value);
-    };
+function RootLayout({ children }: { children: React.ReactNode }) {
+    const { theme } = useTheme();
 
     return (
         <html
@@ -30,19 +34,8 @@ export default function Root({ children }: { children: React.ReactNode }) {
             )}
         >
             <body {...stylex.props(styles.reset, styles.body)}>
-                <Appbar>
-                    <h1>Ruciloss</h1>
-                </Appbar>
+                <Appbar />
                 {children}
-                <select
-                    value={theme}
-                    onChange={handleThemeChange}
-                    style={{ position: "fixed", top: 20, right: 20 }}
-                >
-                    <option value="system">System</option>
-                    <option value="light">Light</option>
-                    <option value="dark">Dark</option>
-                </select>
                 <SelfXSSWarning />
             </body>
         </html>

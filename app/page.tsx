@@ -8,7 +8,7 @@ import CodeSnippet from "@/components/CodeSnippet/CodeSnippet";
 import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
-    title: "Next.js & StyleX",
+    title: "NexteX",
     description:
         "A simple template for building modern websites with Next.js & StyleX.",
 };
