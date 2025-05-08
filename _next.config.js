@@ -39,6 +39,7 @@ const nextConfig = {
                                 "@stylexjs/babel-plugin",
                                 {
                                     dev: dev,
+                                    //classNamePrefix: "r",
                                     runtimeInjection: false,
                                     treeshakeCompensation: true,
                                     aliases: {
