@@ -8,6 +8,7 @@ export const styles = stylex.create({
         gap: spacing.xxxs,
         fontSize: text.xs,
         textTransform: "capitalize",
+        padding: `${spacing.xs} 0`,
     },
     link: {
         color: "inherit",

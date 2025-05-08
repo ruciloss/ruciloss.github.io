@@ -1,22 +1,29 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing, text } from "../../app/globalTokens.stylex";
+import { colors, spacing } from "../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
     wrapper: {
         display: "flex",
+        justifyContent: "space-between",
         alignItems: "center",
-        gap: spacing.md,
-        flexDirection: {
-            default: "column",
-            "@media (min-width: 768px)": "row",
-        },
-        justifyContent: {
-            default: "start",
-            "@media (min-width: 768px)": "center",
-        },
+        position: "fixed",
+        zIndex: 9999,
+        left: 0,
+        top: 0,
+        width: "100%",
+        margin: "auto",
+        boxShadow: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .1)`,
+        backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, .75)`,
+        backdropFilter: "blur(6px)",
+        padding: `${spacing.xxs} ${spacing.xs}`,
     },
-    heading: {
-        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
-        fontSize: text.h2,
+    wrapperInner: {
+        display: "flex",
+        alignItems: "center",
+        gap: spacing.sm,
+    },
+    logo: {
+        color: "inherit",
+        display: "flex",
     },
 });

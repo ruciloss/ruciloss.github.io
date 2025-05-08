@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Container from "@/components/Container/Container";
 
 export const metadata: Metadata = {
     title: "About | NexteX",
@@ -8,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const About = () => {
-    return <Container>fsdfsdfds</Container>;
+    return <span>dsadsadsa</span>;
 };
 
 export default About;

@@ -1,16 +1,13 @@
 import * as stylex from "@stylexjs/stylex";
-import { spacing } from "../../app/globalTokens.stylex";
+import { global, spacing } from "../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
     wrapper: {
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        textAlign: "center",
-        height: "100vh",
-        maxWidth: "600px",
+        minHeight: `calc(100vh - ${global.headerHeight})`,
+        position: "relative",
+        top: global.headerHeight,
+        maxWidth: "1320px",
         margin: "auto",
-        padding: `${spacing.lg} ${spacing.sm}`,
+        padding: `0 ${spacing.xs}`,
     },
 });

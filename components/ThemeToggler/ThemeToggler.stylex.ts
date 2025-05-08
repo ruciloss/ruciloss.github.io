@@ -10,7 +10,7 @@ export const styles = stylex.create({
         cursor: "pointer",
         backgroundColor: {
             default: `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
-            ":hover": `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
+            ":hover": `rgba(${colors.bgAltHoverR}, ${colors.bgAltHoverG}, ${colors.bgAltHoverB}, 1)`,
         },
         borderWidth: 0,
         display: "flex",
@@ -27,7 +27,7 @@ export const styles = stylex.create({
         right: 0,
         backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
         borderRadius: radius.md,
-        zIndex: 1000,
+        zIndex: 9999,
         padding: `${spacing.xs} ${spacing.xxs}`,
         boxShadow: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .2)`,
     },

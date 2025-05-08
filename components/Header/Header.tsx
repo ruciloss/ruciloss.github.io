@@ -1,10 +1,22 @@
+import Link from "next/link";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Header.stylex";
+import ThemeToggler from "@/components/ThemeToggler/ThemeToggler";
+import Logo from "./Logo";
 
-const Header = () => (
-    <div {...stylex.props(styles.wrapper)}>
-        <h1 {...stylex.props(styles.heading)}>NexteX</h1>
-    </div>
-);
+const Header = () => {
+    return (
+        <div role="banner" {...stylex.props(styles.wrapper)}>
+            <div {...stylex.props(styles.wrapperInner)}>
+                <Link href="/" {...stylex.props(styles.logo)}>
+                    <Logo />
+                </Link>
+            </div>
+            <div {...stylex.props(styles.wrapperInner)}>
+                <ThemeToggler />
+            </div>
+        </div>
+    );
+};
 
 export default Header;

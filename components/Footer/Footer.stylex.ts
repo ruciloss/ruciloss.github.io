@@ -9,9 +9,11 @@ export const styles = stylex.create({
         justifyContent: "space-between",
         gap: spacing.sm,
         marginTop: spacing.xxl,
-        color: `rgba(${colors.textMutedR}, ${colors.textMutedG}, ${colors.textMutedB}, 1)`,
         width: "100%",
-        padding: spacing.sm,
+        paddingTop: spacing.sm,
+        borderTopStyle: "solid",
+        borderTopWidth: "1px",
+        borderTopColor: `rgba(${colors.borderR}, ${colors.borderG}, ${colors.borderB}, 1)`,
     },
     item: {
         display: "flex",
@@ -19,8 +21,8 @@ export const styles = stylex.create({
         gap: spacing.xxs,
     },
     link: {
+        color: "inherit",
         display: "flex",
-        color: `rgba(${colors.textMutedR}, ${colors.textMutedG}, ${colors.textMutedB}, 1)`,
         textDecoration: {
             default: "none",
             ":hover": "underline",

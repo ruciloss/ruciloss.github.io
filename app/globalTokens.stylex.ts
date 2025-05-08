@@ -199,6 +199,10 @@ export const spacing = stylex.defineVars({
 /**
  * Global Tokens
  */
+export const global = stylex.defineVars({
+    headerHeight: "55px",
+});
+
 const DARK_MODE = "@media (prefers-color-scheme: dark)";
 
 export const colors = stylex.defineVars({
@@ -222,6 +226,10 @@ export const colors = stylex.defineVars({
     bgAltG: { default: "229", [DARK_MODE]: "61" },
     bgAltB: { default: "233", [DARK_MODE]: "62" },
 
+    bgAltHoverR: { default: "213", [DARK_MODE]: "78" },
+    bgAltHoverG: { default: "216", [DARK_MODE]: "80" },
+    bgAltHoverB: { default: "220", [DARK_MODE]: "80" },
+
     primaryR: { default: "8", [DARK_MODE]: "8" },
     primaryG: { default: "102", [DARK_MODE]: "102" },
     primaryB: { default: "255", [DARK_MODE]: "255" },
@@ -230,17 +238,13 @@ export const colors = stylex.defineVars({
     blackWhiteG: { default: "9", [DARK_MODE]: "250" },
     blackWhiteB: { default: "11", [DARK_MODE]: "250" },
 
-    textMutedR: { default: "113", [DARK_MODE]: "113" },
-    textMutedG: { default: "113", [DARK_MODE]: "113" },
-    textMutedB: { default: "122", [DARK_MODE]: "122" },
-
     dangerR: { default: "239", [DARK_MODE]: "239" },
     dangerG: { default: "68", [DARK_MODE]: "68" },
     dangerB: { default: "68", [DARK_MODE]: "68" },
 
-    borderR: { default: "208", [DARK_MODE]: "59" },
-    borderG: { default: "211", [DARK_MODE]: "61" },
-    borderB: { default: "215", [DARK_MODE]: "62" },
+    borderR: { default: "187", [DARK_MODE]: "101" },
+    borderG: { default: "189", [DARK_MODE]: "104" },
+    borderB: { default: "193", [DARK_MODE]: "108" },
 
     shadowR: { default: "0", [DARK_MODE]: "0" },
     shadowG: { default: "0", [DARK_MODE]: "0" },

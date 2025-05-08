@@ -7,11 +7,22 @@ import React from "react";
 const Breadcrumbs = () => {
     const pathname = usePathname();
 
+    // Skryj breadcrumbs na hlavní stránce
+    if (pathname === "/") return null;
+
+    // Skryj breadcrumbs na not-found nebo jiných speciálních cestách (např. 404, 500)
+    const isErrorPage =
+        pathname.startsWith("/404") ||
+        pathname.startsWith("/not-found") ||
+        pathname.startsWith("/500");
+    if (isErrorPage) return null;
+
     const pathSegments = pathname
         .split("/")
         .filter((segment) => segment !== "");
 
     const breadcrumbs = [
+        { label: "Home", href: "/" },
         ...pathSegments.map((segment, index) => {
             const href = "/" + pathSegments.slice(0, index + 1).join("/");
             return { label: segment, href };
