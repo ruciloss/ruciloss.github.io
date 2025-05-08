@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Card from "@/components/Card/Card";
+import Inner from "@/components/Layout/Inner/Inner";
 import Content from "@/components/Content/Content";
-import CodeSnippet from "@/components/CodeSnippet/CodeSnippet";
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/Layout/Footer/Footer";
 
 export const metadata: Metadata = {
     title: "NexteX",
@@ -12,11 +11,10 @@ export const metadata: Metadata = {
 
 const Homepage = () => {
     return (
-        <Card>
+        <Inner>
             <Content />
-            <CodeSnippet />
             <Footer />
-        </Card>
+        </Inner>
     );
 };
 

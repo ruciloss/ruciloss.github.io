@@ -1,5 +1,5 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors, spacing, text } from "../../app/globalTokens.stylex";
+import { colors, spacing, text } from "../../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
     wrapper: {

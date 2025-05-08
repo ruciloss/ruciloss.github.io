@@ -6,8 +6,8 @@ import { styles } from "./layout.stylex";
 import { ThemeProvider, useTheme } from "@/contexts/ThemeContext";
 import { light, dark } from "./themes";
 import SelfXSSWarning from "@/components/SelfXSSWarning";
-import Header from "@/components/Header/Header";
-import Wrapper from "@/components/Wrapper/Wrapper";
+import Header from "@/components/Layout/Header/Header";
+import Wrapper from "@/components/Layout/Wrapper/Wrapper";
 
 const Root = ({ children }: { children: React.ReactNode }) => {
     return (

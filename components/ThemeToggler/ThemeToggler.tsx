@@ -69,7 +69,7 @@ const ThemeToggler = () => {
                         strokeWidth={2}
                         role="img"
                         aria-hidden="false"
-                        aria-label={`${currentOption.label} theme icon`}
+                        aria-label={`${theme} theme icon`}
                     />
                 ) : (
                     <Monitor
@@ -77,7 +77,7 @@ const ThemeToggler = () => {
                         height={18}
                         strokeWidth={2}
                         role="img"
-                        aria-label="System theme icon"
+                        aria-label="automatic theme icon"
                     />
                 )}
             </span>
@@ -112,6 +112,10 @@ const ThemeToggler = () => {
                             <div
                                 key={opt.value}
                                 {...stylex.props(styles.item)}
+                                role="button"
+                                tabIndex={0}
+                                aria-pressed={isSelected}
+                                aria-label={`Dark Mode ${opt.label}${isSelected ? " (selected)" : ""}`}
                                 onClick={() =>
                                     handleSelect(
                                         opt.value as
@@ -120,9 +124,17 @@ const ThemeToggler = () => {
                                             | "dark",
                                     )
                                 }
-                                role="button"
-                                aria-pressed={isSelected}
-                                tabIndex={0}
+                                onKeyDown={(e) => {
+                                    if (e.key === "Enter" || e.key === " ") {
+                                        e.preventDefault();
+                                        handleSelect(
+                                            opt.value as
+                                                | "system"
+                                                | "light"
+                                                | "dark",
+                                        );
+                                    }
+                                }}
                             >
                                 <div {...stylex.props(styles.itemContent)}>
                                     <div>

@@ -4,7 +4,7 @@ import Shields from "@/components/Shields/Shields";
 
 const Content = () => (
     <div>
-        <span {...stylex.props(styles.heading)} role="heading" aria-level={1}>
+        <span role="heading" aria-level={1} {...stylex.props(styles.heading)}>
             NexteX
         </span>
         <Shields
@@ -15,25 +15,8 @@ const Content = () => (
             ]}
         />
         <span>
-            A simple template for building modern websites with{" "}
-            <a
-                {...stylex.props(styles.link)}
-                href="https://nextjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Next.js
-            </a>{" "}
-            and{" "}
-            <a
-                {...stylex.props(styles.link)}
-                href="https://stylexjs.com"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                StyleX
-            </a>
-            , designed for fast development and easy customization.
+            A streamlined starter template leveraging a modern tech stack for
+            rapid development and effortless customization.
         </span>
     </div>
 );

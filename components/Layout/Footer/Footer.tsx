@@ -29,7 +29,7 @@ const Footer = () => (
                 href="https://github.com/ruciloss/ruciloss.github.io"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Link to GitHub profile"
+                aria-label="Link to GitHub"
                 role="link"
                 {...stylex.props(styles.link)}
             >

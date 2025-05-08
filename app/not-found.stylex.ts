@@ -2,16 +2,15 @@ import * as stylex from "@stylexjs/stylex";
 import { colors, spacing, text } from "./globalTokens.stylex";
 
 export const styles = stylex.create({
-    wrapper: {
+    heading: {
         display: "flex",
         alignItems: "center",
         textAlign: "center",
         gap: spacing.xs,
-        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
         height: "50px",
-    },
-    error: {
+        fontWeight: 700,
         fontSize: text.p,
+        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
     },
     divider: {
         height: "100%",
