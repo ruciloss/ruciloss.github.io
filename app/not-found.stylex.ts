@@ -6,9 +6,9 @@ export const styles = stylex.create({
         display: "flex",
         alignItems: "center",
         textAlign: "center",
-        height: "100vh",
         gap: spacing.xs,
         color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
+        height: "50px",
     },
     error: {
         fontSize: text.p,

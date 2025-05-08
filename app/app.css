@@ -4,10 +4,26 @@
         padding: 0;
         margin: 0;
     }
+
+    /* Reset pro všechny formulářové prvky */
+    input,
+    button,
+    textarea,
+    select,
+    option {
+        background: none;
+        border: none;
+        font: inherit;
+        color: inherit;
+    }
+
+    /* Reset pro radio button a checkbox */
+    input[type="radio"],
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
 }
 
 @stylex;
-
-.svg-inline--fa {
-    height: unset;
-}

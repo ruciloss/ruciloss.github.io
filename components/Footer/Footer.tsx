@@ -1,8 +1,6 @@
 import Image from "next/image";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Footer.stylex";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => (
     <div role="contentinfo" {...stylex.props(styles.wrapper)}>
@@ -17,22 +15,25 @@ const Footer = () => (
         </div>
         <div {...stylex.props(styles.item)}>
             <a
-                {...stylex.props(styles.link)}
                 href="https://github.com/ruciloss/ruciloss.github.io/blob/master/LICENSE"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Link to Licene MIT"
+                role="link"
+                {...stylex.props(styles.link)}
             >
                 License MIT
             </a>
             <span>&mdash;</span>
             <a
-                {...stylex.props(styles.link)}
                 href="https://github.com/ruciloss/ruciloss.github.io"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Link to GitHub profile"
+                role="link"
+                {...stylex.props(styles.link)}
             >
-                <FontAwesomeIcon icon={faGithub} width={18} height={18} />
+                GitHub
             </a>
         </div>
     </div>

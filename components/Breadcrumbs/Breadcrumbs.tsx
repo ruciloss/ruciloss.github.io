@@ -7,15 +7,7 @@ import React from "react";
 const Breadcrumbs = () => {
     const pathname = usePathname();
 
-    // Skryj breadcrumbs na hlavní stránce
     if (pathname === "/") return null;
-
-    // Skryj breadcrumbs na not-found nebo jiných speciálních cestách (např. 404, 500)
-    const isErrorPage =
-        pathname.startsWith("/404") ||
-        pathname.startsWith("/not-found") ||
-        pathname.startsWith("/500");
-    if (isErrorPage) return null;
 
     const pathSegments = pathname
         .split("/")
@@ -30,7 +22,11 @@ const Breadcrumbs = () => {
     ];
 
     return (
-        <div role="navigation" {...stylex.props(styles.wrapper)}>
+        <div
+            role="navigation"
+            aria-label="Breadcrumbs"
+            {...stylex.props(styles.wrapper)}
+        >
             {breadcrumbs.map((breadcrumb, index) => (
                 <React.Fragment key={index}>
                     {index < breadcrumbs.length - 1 ? (

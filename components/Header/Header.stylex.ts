@@ -16,6 +16,7 @@ export const styles = stylex.create({
         backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, .75)`,
         backdropFilter: "blur(6px)",
         padding: `${spacing.xxs} ${spacing.xs}`,
+        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteG}, 1)`,
     },
     wrapperInner: {
         display: "flex",

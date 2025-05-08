@@ -2,16 +2,15 @@ import { useState, useRef, useEffect } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./ThemeToggler.stylex";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun, faDesktop } from "@fortawesome/free-solid-svg-icons";
+import { Sun, Moon, Monitor } from "lucide-react";
 
 const options = [
-    { value: "dark", label: "On", icon: faMoon },
-    { value: "light", label: "Off", icon: faSun },
+    { value: "light", label: "Off", icon: Sun },
+    { value: "dark", label: "On", icon: Moon },
     {
         value: "system",
         label: "Automatic",
-        icon: faDesktop,
+        icon: Monitor,
         description:
             "We'll automatically adjust the display based on your device's system settings.",
     },
@@ -25,7 +24,6 @@ const ThemeToggler = () => {
 
     const handleSelect = (value: "system" | "light" | "dark") => {
         setTheme(value);
-        //setOpen(false);
     };
 
     const currentOption = options.find((opt) => opt.value === theme);
@@ -51,26 +49,49 @@ const ThemeToggler = () => {
 
     return (
         <div {...stylex.props(styles.wrapper)}>
-            <button
+            <span
+                role="button"
+                tabIndex={0}
                 ref={buttonRef}
-                {...stylex.props(styles.button)}
+                aria-label={`Toggle theme menu (current: ${theme})`}
                 onClick={() => setOpen((prev) => !prev)}
+                onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        setOpen((prev) => !prev);
+                    }
+                }}
+                {...stylex.props(styles.button)}
             >
-                <FontAwesomeIcon
-                    icon={currentOption?.icon ?? faDesktop}
-                    width={18}
-                    height={18}
-                />
-            </button>
+                {currentOption?.icon ? (
+                    <currentOption.icon
+                        width={18}
+                        height={18}
+                        strokeWidth={2}
+                        role="img"
+                        aria-hidden="false"
+                        aria-label={`${currentOption.label} theme icon`}
+                    />
+                ) : (
+                    <Monitor
+                        width={18}
+                        height={18}
+                        strokeWidth={2}
+                        role="img"
+                        aria-label="System theme icon"
+                    />
+                )}
+            </span>
 
             {open && (
                 <div {...stylex.props(styles.dropdown)} ref={dropdownRef}>
                     <div {...stylex.props(styles.header)}>
                         <span {...stylex.props(styles.icon)}>
-                            <FontAwesomeIcon
-                                icon={faMoon}
+                            <Moon
                                 width={18}
                                 height={18}
+                                strokeWidth={2}
+                                role="img"
+                                aria-label="Moon icon"
                             />
                         </span>
                         <div>
@@ -99,6 +120,9 @@ const ThemeToggler = () => {
                                             | "dark",
                                     )
                                 }
+                                role="button"
+                                aria-pressed={isSelected}
+                                tabIndex={0}
                             >
                                 <div {...stylex.props(styles.itemContent)}>
                                     <div>
@@ -115,11 +139,15 @@ const ThemeToggler = () => {
                                             </span>
                                         )}
                                     </div>
-                                    <span
+                                    <input
                                         {...stylex.props(
                                             styles.radio,
                                             isSelected && styles.radioSelected,
                                         )}
+                                        type="radio"
+                                        aria-checked={
+                                            isSelected ? "true" : "false"
+                                        }
                                     />
                                 </div>
                             </div>

@@ -7,8 +7,7 @@ import { ThemeProvider, useTheme } from "@/contexts/ThemeContext";
 import { light, dark } from "./themes";
 import SelfXSSWarning from "@/components/SelfXSSWarning";
 import Header from "@/components/Header/Header";
-import Container from "@/components/Container/Container";
-import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
+import Wrapper from "@/components/Wrapper/Wrapper";
 
 const Root = ({ children }: { children: React.ReactNode }) => {
     return (
@@ -37,10 +36,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         >
             <body {...stylex.props(styles.reset, styles.body)}>
                 <Header />
-                <Container>
-                    <Breadcrumbs />
-                    {children}
-                </Container>
+                <Wrapper>{children}</Wrapper>
                 <SelfXSSWarning />
             </body>
         </html>

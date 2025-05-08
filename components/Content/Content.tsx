@@ -1,9 +1,19 @@
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./Content.stylex";
+import Shields from "@/components/Shields/Shields";
 
 const Content = () => (
     <div>
-        <h1 {...stylex.props(styles.heading)}>NexteX</h1>
+        <span {...stylex.props(styles.heading)} role="heading" aria-level={1}>
+            NexteX
+        </span>
+        <Shields
+            shields={[
+                { label: "License", message: "MIT", color: "blue" },
+                { label: "Version", message: "1.0.0", color: "orange" },
+                { label: "Release", message: "stable", color: "brightgreen" },
+            ]}
+        />
         <span>
             A simple template for building modern websites with{" "}
             <a

@@ -80,8 +80,8 @@ export const styles = stylex.create({
         fontSize: text.xs,
     },
     radio: {
-        width: "10px",
-        height: "10px",
+        width: "12px",
+        height: "12px",
         borderRadius: "50%",
         backgroundColor: "transparent",
         flexShrink: 0,

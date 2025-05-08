@@ -8,6 +8,10 @@ export const styles = stylex.create({
         flexDirection: "column",
         justifyContent: "start",
         alignItems: "center",
+        textAlign: "center",
         gap: spacing.lg,
+        padding: `0 ${spacing.xs}`,
+        maxWidth: "600px",
+        margin: "auto",
     },
 });

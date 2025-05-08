@@ -4,9 +4,10 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./not-found.stylex";
+import Card from "@/components/Card/Card";
 
 const NotFound = () => {
-    const [countdown, setCountdown] = useState(100);
+    const [countdown, setCountdown] = useState(10);
     const router = useRouter();
 
     useEffect(() => {
@@ -23,16 +24,20 @@ const NotFound = () => {
     }, [router]);
 
     return (
-        <div {...stylex.props(styles.wrapper)}>
-            <h1 {...stylex.props(styles.error)}>404</h1>
-            <span {...stylex.props(styles.divider)}></span>
-            <p {...stylex.props(styles.error)}>This page could not be found.</p>
+        <Card>
+            <div {...stylex.props(styles.wrapper)}>
+                <h1 {...stylex.props(styles.error)}>404</h1>
+                <span {...stylex.props(styles.divider)}></span>
+                <p {...stylex.props(styles.error)}>
+                    This page could not be found.
+                </p>
+            </div>
             <p {...stylex.props(styles.paragraph)}>
                 You will be redirected to the homepage in{" "}
                 <span {...stylex.props(styles.countdown)}>{countdown}</span>{" "}
                 seconds.
             </p>
-        </div>
+        </Card>
     );
 };
 
