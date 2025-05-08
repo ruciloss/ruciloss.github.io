@@ -3,10 +3,10 @@ import { spacing } from "../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
     wrapper: {
-        display: "flex",
         alignItems: "center",
-        justifyContent: "center",
+        display: "flex",
         gap: spacing.xxs,
+        justifyContent: "center",
         margin: `${spacing.sm} 0`,
     },
 });

@@ -12,16 +12,16 @@ export const styles = stylex.create({
         colorScheme: "dark",
     },
     reset: {
-        minHeight: "100%",
         margin: 0,
+        minHeight: "100%",
         padding: 0,
     },
     body: {
+        backgroundImage: `linear-gradient(to bottom, rgb(${colors.bgStartR}, ${colors.bgStartG}, ${colors.bgStartB}), rgb(${colors.bgEndR}, ${colors.bgEndG}, ${colors.bgEndB}))`,
+        color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,
         fontFamily: fonts.sans,
         fontSize: text.sm,
         fontWeight: 400,
         lineHeight: 1.34,
-        color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,
-        backgroundImage: `linear-gradient(to bottom, rgb(${colors.bgStartR}, ${colors.bgStartG}, ${colors.bgStartB}), rgb(${colors.bgEndR}, ${colors.bgEndG}, ${colors.bgEndB}))`,
     },
 });

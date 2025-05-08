@@ -3,10 +3,10 @@ import { spacing, text } from "../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
     wrapper: {
-        display: "flex",
         alignItems: "center",
-        gap: spacing.xxxs,
+        display: "flex",
         fontSize: text.xs,
+        gap: spacing.xxxs,
         textTransform: "capitalize",
     },
     link: {

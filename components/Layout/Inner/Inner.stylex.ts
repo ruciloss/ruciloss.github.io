@@ -3,15 +3,15 @@ import { spacing } from "../../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
     wrapper: {
-        width: "100%",
+        alignItems: "center",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "start",
-        alignItems: "center",
-        textAlign: "center",
         gap: spacing.lg,
-        padding: `0 ${spacing.xs}`,
-        maxWidth: "500px",
+        justifyContent: "start",
         margin: "auto",
+        maxWidth: "500px",
+        padding: `0 ${spacing.xs}`,
+        textAlign: "center",
+        width: "100%",
     },
 });
