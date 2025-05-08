@@ -15,7 +15,7 @@ A simple template for building modern websites with **Next.js** and **StyleX**, 
 Before you begin, ensure that you have the following installed on your machine:
 
 1. [Node.js](https://nodejs.org/) >= v20.x.x (recommended LTS)
-2. [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/) package manager
+2. [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/) package manager (recommended Yarn Berry)
 
 ### Tasks
 
