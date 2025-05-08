@@ -18,4 +18,14 @@ export const styles = stylex.create({
         backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
         padding: `${spacing.xxs} ${spacing.xs}`,
     },
+    wrapperInner: {
+        display: "flex",
+        alignItems: "center",
+        gap: spacing.sm,
+        textTransform: "capitalize",
+    },
+    logo: {
+        color: "inherit",
+        display: "flex",
+    },
 });
