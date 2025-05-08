@@ -5,6 +5,7 @@ import Header from "@/components/Header/Header";
 import Content from "@/components/Content/Content";
 import CodeSnippet from "@/components/CodeSnippet/CodeSnippet";
 import Footer from "@/components/Footer/Footer";
+import Badges from "@/components/Badges/BadgesX";
 
 export const metadata: Metadata = {
     title: "NexteX",
@@ -17,6 +18,7 @@ const Homepage = () => {
         <Container>
             <Card>
                 <Header />
+                <Badges />
                 <Content />
                 <CodeSnippet />
                 <Footer />
