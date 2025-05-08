@@ -1,8 +1,8 @@
 import Image from "next/image";
 import * as stylex from "@stylexjs/stylex";
-import { styles } from "./badges.stylex";
+import { styles } from "./Badges.stylex";
 
-export default function Badges() {
+const Badges = () => {
     return (
         <div {...stylex.props(styles.badges)}>
             <Image
@@ -25,4 +25,6 @@ export default function Badges() {
             />
         </div>
     );
-}
+};
+
+export default Badges;

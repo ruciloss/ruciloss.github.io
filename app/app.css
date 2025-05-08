@@ -7,3 +7,7 @@
 }
 
 @stylex;
+
+.svg-inline--fa {
+    height: unset;
+}

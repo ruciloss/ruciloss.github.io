@@ -9,7 +9,7 @@ import {
 
 export const styles = stylex.create({
     wrapper: {
-        borderRadius: radius.lg,
+        borderRadius: radius.sm,
         fontFamily: "monospace",
         borderStyle: "solid",
         borderWidth: "1px",
@@ -25,8 +25,8 @@ export const styles = stylex.create({
         justifyContent: "space-between",
         alignItems: "center",
         padding: `${spacing.xxs} ${spacing.xs}`,
-        borderTopLeftRadius: radius.lg,
-        borderTopRightRadius: radius.lg,
+        borderTopLeftRadius: radius.sm,
+        borderTopRightRadius: radius.sm,
         backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
         color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
     },

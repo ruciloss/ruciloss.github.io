@@ -7,16 +7,17 @@ import { ThemeProvider, useTheme } from "@/contexts/ThemeContext";
 import { light, dark } from "./themes";
 import SelfXSSWarning from "@/components/SelfXSSWarning";
 import Appbar from "@/components/Appbar/Appbar";
+import Breadcrumbs from "@/components/Breadcrumbs/Breadcrumbs";
 
-export default function Root({ children }: { children: React.ReactNode }) {
+const Root = ({ children }: { children: React.ReactNode }) => {
     return (
         <ThemeProvider>
             <RootLayout>{children}</RootLayout>
         </ThemeProvider>
     );
-}
+};
 
-function RootLayout({ children }: { children: React.ReactNode }) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
     const { theme } = useTheme();
 
     return (
@@ -35,9 +36,12 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         >
             <body {...stylex.props(styles.reset, styles.body)}>
                 <Appbar />
+                <Breadcrumbs />
                 {children}
                 <SelfXSSWarning />
             </body>
         </html>
     );
-}
+};
+
+export default Root;

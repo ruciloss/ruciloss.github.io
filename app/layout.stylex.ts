@@ -20,7 +20,7 @@ export const styles = stylex.create({
         fontFamily: fonts.sans,
         fontSize: text.sm,
         fontWeight: 400,
-        lineHeight: 1.5,
+        lineHeight: 1.34,
         color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,
         backgroundImage: `linear-gradient(to bottom, rgb(${colors.bgStartR}, ${colors.bgStartG}, ${colors.bgStartB}), rgb(${colors.bgEndR}, ${colors.bgEndG}, ${colors.bgEndB}))`,
     },

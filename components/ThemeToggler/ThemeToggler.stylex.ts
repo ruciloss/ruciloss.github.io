@@ -1,18 +1,101 @@
 import * as stylex from "@stylexjs/stylex";
-import { spacing } from "../../app/globalTokens.stylex";
+import { colors, spacing, radius, text } from "../../app/globalTokens.stylex";
 
 export const styles = stylex.create({
     wrapper: {
+        position: "relative",
+        display: "inline-block",
+    },
+    button: {
+        cursor: "pointer",
+        backgroundColor: {
+            default: `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
+            ":hover": `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
+        },
+        borderWidth: 0,
         display: "flex",
         alignItems: "center",
-        gap: spacing.md,
-        flexDirection: {
-            default: "column",
-            "@media (min-width: 768px)": "row",
+        justifyContent: "center",
+        minWidth: "35px",
+        minHeight: "35px",
+        borderRadius: "100%",
+    },
+    dropdown: {
+        position: "absolute",
+        minWidth: "350px",
+        marginTop: spacing.md,
+        right: 0,
+        backgroundColor: `rgba(${colors.bgSecondaryR}, ${colors.bgSecondaryG}, ${colors.bgSecondaryB}, 1)`,
+        borderRadius: radius.md,
+        zIndex: 1000,
+        padding: `${spacing.xs} ${spacing.xxs}`,
+        boxShadow: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .2)`,
+    },
+    header: {
+        display: "flex",
+        alignItems: "center",
+        gap: spacing.xs,
+        marginBottom: spacing.sm,
+    },
+    heading: {
+        display: "block",
+        fontSize: text.p,
+        fontWeight: 700,
+        marginBottom: spacing.xxxs,
+        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
+    },
+    icon: {
+        backgroundColor: `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minWidth: "35px",
+        minHeight: "35px",
+        borderRadius: "100%",
+        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
+    },
+    item: {
+        marginLeft: spacing.lg,
+        padding: `${spacing.xxs}`,
+        cursor: "pointer",
+        backgroundColor: {
+            default: "transparent",
+            ":hover": `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
         },
-        justifyContent: {
-            default: "start",
-            "@media (min-width: 768px)": "center",
-        },
+        borderRadius: radius.sm,
+        caretColor: "transparent",
+    },
+    itemContent: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        gap: spacing.xxs,
+    },
+    title: {
+        color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
+        fontWeight: 600,
+        display: "block",
+    },
+    description: {
+        fontSize: text.xs,
+    },
+    radio: {
+        width: "10px",
+        height: "10px",
+        borderRadius: "50%",
+        backgroundColor: "transparent",
+        flexShrink: 0,
+        transition: "background-color 0.2s ease, border-color 0.2s ease",
+        outlineWidth: "2px",
+        outlineStyle: "solid",
+        outlineColor: `rgba(${colors.borderR}, ${colors.borderG}, ${colors.borderB}, 1)`,
+        outlineOffset: "2px",
+        position: "relative",
+        left: "-4px",
+    },
+    radioSelected: {
+        backgroundColor: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+        borderColor: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
+        outlineColor: `rgba(${colors.primaryR}, ${colors.primaryG}, ${colors.primaryB}, 1)`,
     },
 });

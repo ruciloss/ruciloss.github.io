@@ -2,9 +2,9 @@
 
 import { useEffect } from "react";
 
-export default function SelfXSSWarning() {
+const SelfXSSWarning = () => {
     useEffect(() => {
-        function showSelfXSS() {
+        const showSelfXSS = () => {
             console.log(
                 "%cStop!",
                 "font: 4em sans-serif; color: red; text-shadow: 2px 2px 5px black;",
@@ -13,7 +13,7 @@ export default function SelfXSSWarning() {
                 "%cThis browser feature is intended for developers. If someone told you to copy and paste something here to enable a feature or hack an account, it's a scam and they will gain access to your personal information.",
                 "font: 400 1.5em sans-serif; color: inherit;",
             );
-        }
+        };
 
         showSelfXSS();
 
@@ -21,4 +21,6 @@ export default function SelfXSSWarning() {
     }, []);
 
     return null;
-}
+};
+
+export default SelfXSSWarning;

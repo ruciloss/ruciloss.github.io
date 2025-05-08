@@ -11,6 +11,7 @@ export const styles = stylex.create({
         top: 0,
         width: "100%",
         margin: "auto",
+        boxShadow: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .2)`,
         borderBottomStyle: "solid",
         borderBottomWidth: "1px",
         borderBottomColor: `rgba(${colors.borderR}, ${colors.borderG}, ${colors.borderB}, 1)`,

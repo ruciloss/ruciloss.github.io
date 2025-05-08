@@ -202,24 +202,28 @@ export const spacing = stylex.defineVars({
 const DARK_MODE = "@media (prefers-color-scheme: dark)";
 
 export const colors = stylex.defineVars({
-    foregroundR: { default: "63", [DARK_MODE]: "161" },
-    foregroundG: { default: "63", [DARK_MODE]: "161" },
-    foregroundB: { default: "70", [DARK_MODE]: "170" },
+    foregroundR: { default: "101", [DARK_MODE]: "176" },
+    foregroundG: { default: "104", [DARK_MODE]: "179" },
+    foregroundB: { default: "108", [DARK_MODE]: "184" },
 
-    bgStartR: { default: "214", [DARK_MODE]: "20" },
-    bgStartG: { default: "219", [DARK_MODE]: "22" },
-    bgStartB: { default: "220", [DARK_MODE]: "27" },
+    bgStartR: { default: "242", [DARK_MODE]: "28" },
+    bgStartG: { default: "244", [DARK_MODE]: "28" },
+    bgStartB: { default: "247", [DARK_MODE]: "29" },
 
     bgEndR: { default: "255", [DARK_MODE]: "0" },
     bgEndG: { default: "255", [DARK_MODE]: "0" },
     bgEndB: { default: "255", [DARK_MODE]: "0" },
 
-    bgSecondaryR: { default: "255", [DARK_MODE]: "24" },
-    bgSecondaryG: { default: "255", [DARK_MODE]: "24" },
-    bgSecondaryB: { default: "255", [DARK_MODE]: "27" },
+    bgSecondaryR: { default: "255", [DARK_MODE]: "37" },
+    bgSecondaryG: { default: "255", [DARK_MODE]: "39" },
+    bgSecondaryB: { default: "255", [DARK_MODE]: "40" },
 
-    primaryR: { default: "0", [DARK_MODE]: "0" },
-    primaryG: { default: "170", [DARK_MODE]: "170" },
+    bgAltR: { default: "226", [DARK_MODE]: "59" },
+    bgAltG: { default: "229", [DARK_MODE]: "61" },
+    bgAltB: { default: "233", [DARK_MODE]: "62" },
+
+    primaryR: { default: "8", [DARK_MODE]: "8" },
+    primaryG: { default: "102", [DARK_MODE]: "102" },
     primaryB: { default: "255", [DARK_MODE]: "255" },
 
     blackWhiteR: { default: "9", [DARK_MODE]: "250" },
@@ -234,9 +238,13 @@ export const colors = stylex.defineVars({
     dangerG: { default: "68", [DARK_MODE]: "68" },
     dangerB: { default: "68", [DARK_MODE]: "68" },
 
-    borderR: { default: "212", [DARK_MODE]: "39" },
-    borderG: { default: "212", [DARK_MODE]: "39" },
-    borderB: { default: "216", [DARK_MODE]: "42" },
+    borderR: { default: "208", [DARK_MODE]: "59" },
+    borderG: { default: "211", [DARK_MODE]: "61" },
+    borderB: { default: "215", [DARK_MODE]: "62" },
+
+    shadowR: { default: "0", [DARK_MODE]: "0" },
+    shadowG: { default: "0", [DARK_MODE]: "0" },
+    shadowB: { default: "0", [DARK_MODE]: "0" },
 });
 
 export const fonts = stylex.defineVars({
@@ -278,7 +286,7 @@ export const scales = stylex.defineVars({
 });
 
 export const radius = stylex.defineVars({
-    sm: "3px",
-    md: "6px",
-    lg: "9px",
+    sm: "6px",
+    md: "9px",
+    lg: "12px",
 });

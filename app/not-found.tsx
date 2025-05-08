@@ -6,7 +6,7 @@ import * as stylex from "@stylexjs/stylex";
 import { styles } from "./not-found.stylex";
 import Container from "@/components/Container/Container";
 
-export default function NotFound() {
+const NotFound = () => {
     const [countdown, setCountdown] = useState(10);
     const router = useRouter();
 
@@ -39,4 +39,6 @@ export default function NotFound() {
             </p>
         </Container>
     );
-}
+};
+
+export default NotFound;
