@@ -1,10 +1,10 @@
 import { fileURLToPath } from "url";
 import { join } from "path";
 
-const dirname = fileURLToPath(new URL(".", import.meta.url));
-
-export default function (api) {
+module.exports = function (api) {
     api.cache(true);
+
+    const dirname = fileURLToPath(new URL(".", import.meta.url));
 
     const presets = ["next/babel"];
     const plugins = [
