@@ -1,7 +1,7 @@
 import { fileURLToPath } from "url";
 import { join } from "path";
 
-module.exports = function (api) {
+export default function (api) {
     api.cache(true);
 
     const dirname = fileURLToPath(new URL(".", import.meta.url));
@@ -30,4 +30,4 @@ module.exports = function (api) {
         presets,
         plugins,
     };
-};
+}
