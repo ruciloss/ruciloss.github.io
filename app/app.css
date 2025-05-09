@@ -5,7 +5,6 @@
         margin: 0;
     }
 
-    /* Reset pro všechny formulářové prvky */
     input,
     button,
     textarea,
@@ -17,7 +16,6 @@
         color: inherit;
     }
 
-    /* Reset pro radio button a checkbox */
     input[type="radio"],
     input[type="checkbox"] {
         appearance: none;
