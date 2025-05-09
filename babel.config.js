@@ -1,4 +1,4 @@
-import * as path from "path";
+import path from "path";
 
 module.exports = function (api) {
     api.cache(true);
