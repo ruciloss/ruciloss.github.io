@@ -1,8 +1,10 @@
 const path = require("path");
 
-module.exports = {
-    presets: ["next/babel"],
-    plugins: [
+module.exports = function (api) {
+    api.cache(true);
+
+    const presets = ["next/babel"];
+    const plugins = [
         [
             "@stylexjs/babel-plugin",
             {
@@ -10,7 +12,7 @@ module.exports = {
                 test: process.env.NODE_ENV === "test",
                 runtimeInjection: false,
                 treeshakeCompensation: true,
-                //classNamePrefix: "r",
+                // classNamePrefix: "y",
                 aliases: {
                     "@/*": [path.join(__dirname, "*")],
                 },
@@ -19,5 +21,10 @@ module.exports = {
                 },
             },
         ],
-    ],
+    ];
+
+    return {
+        presets,
+        plugins,
+    };
 };
