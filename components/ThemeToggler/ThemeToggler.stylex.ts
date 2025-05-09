@@ -34,7 +34,7 @@ export const styles = stylex.create({
     header: {
         alignItems: "center",
         display: "flex",
-        gap: spacing.xs,
+        gap: spacing.xxs,
         marginBottom: spacing.sm,
     },
     heading: {
@@ -69,7 +69,6 @@ export const styles = stylex.create({
     itemContent: {
         alignItems: "center",
         display: "flex",
-        gap: spacing.xxs,
         justifyContent: "space-between",
     },
     title: {
@@ -78,7 +77,9 @@ export const styles = stylex.create({
         fontWeight: 600,
     },
     description: {
+        display: "block",
         fontSize: text.xs,
+        paddingRight: spacing.sm,
     },
     radio: {
         backgroundColor: "transparent",
