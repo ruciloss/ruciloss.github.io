@@ -25,7 +25,7 @@ export const styles = stylex.create({
         borderRadius: radius.md,
         boxShadow: `0 1px 2px rgba(${colors.shadowR}, ${colors.shadowG}, ${colors.shadowB}, .2)`,
         marginTop: spacing.md,
-        minWidth: "360px",
+        minWidth: "350px",
         padding: `${spacing.xs} ${spacing.xxs}`,
         position: "absolute",
         right: 0,
@@ -34,7 +34,7 @@ export const styles = stylex.create({
     header: {
         alignItems: "center",
         display: "flex",
-        gap: spacing.xxs,
+        gap: spacing.xs,
         marginBottom: spacing.sm,
     },
     heading: {
