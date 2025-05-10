@@ -59,10 +59,10 @@ export const styles = stylex.create({
             default: "transparent",
             ":hover": `rgba(${colors.bgAltR}, ${colors.bgAltG}, ${colors.bgAltB}, 1)`,
         },
-
         borderRadius: radius.sm,
         caretColor: "transparent",
         cursor: "pointer",
+        marginBottom: spacing.xxxs,
         marginLeft: spacing.lg,
         padding: `${spacing.xxs}`,
     },
