@@ -98,7 +98,7 @@ const ThemeToggler = () => {
                             <span {...stylex.props(styles.heading)}>
                                 Dark mode
                             </span>
-                            <span>
+                            <span {...stylex.props(styles.description)}>
                                 Adjust the appearance of the website to reduce
                                 glare and give your eyes a break.
                             </span>
@@ -138,13 +138,15 @@ const ThemeToggler = () => {
                             >
                                 <div {...stylex.props(styles.itemContent)}>
                                     <div>
-                                        <span {...stylex.props(styles.title)}>
+                                        <span
+                                            {...stylex.props(styles.itemTitle)}
+                                        >
                                             {opt.label}
                                         </span>
                                         {opt.description && (
                                             <span
                                                 {...stylex.props(
-                                                    styles.description,
+                                                    styles.itemDescription,
                                                 )}
                                             >
                                                 {opt.description}

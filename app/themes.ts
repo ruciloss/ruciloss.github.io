@@ -11,9 +11,9 @@ export const light = stylex.createTheme(colors, {
     bgStartG: "219",
     bgStartB: "220",
 
-    bgEndR: "255",
-    bgEndG: "255",
-    bgEndB: "255",
+    bgEndR: "214",
+    bgEndG: "219",
+    bgEndB: "220",
 
     bgSecondaryR: "255",
     bgSecondaryG: "255",
@@ -57,9 +57,9 @@ export const dark = stylex.createTheme(colors, {
     bgStartG: "28",
     bgStartB: "29",
 
-    bgEndR: "0",
-    bgEndG: "0",
-    bgEndB: "0",
+    bgEndR: "28",
+    bgEndG: "28",
+    bgEndB: "29",
 
     bgSecondaryR: "37",
     bgSecondaryG: "39",

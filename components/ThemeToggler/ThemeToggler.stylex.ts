@@ -32,7 +32,7 @@ export const styles = stylex.create({
         zIndex: 9999,
     },
     header: {
-        alignItems: "center",
+        alignItems: "start",
         display: "flex",
         gap: spacing.xs,
         marginBottom: spacing.sm,
@@ -43,6 +43,10 @@ export const styles = stylex.create({
         fontSize: text.p,
         fontWeight: 700,
         marginBottom: spacing.xxxs,
+    },
+    description: {
+        color: `rgba(${colors.foregroundR}, ${colors.foregroundG}, ${colors.foregroundB}, 1)`,
+        display: "block",
     },
     icon: {
         alignItems: "center",
@@ -71,12 +75,12 @@ export const styles = stylex.create({
         display: "flex",
         justifyContent: "space-between",
     },
-    title: {
+    itemTitle: {
         color: `rgba(${colors.blackWhiteR}, ${colors.blackWhiteG}, ${colors.blackWhiteB}, 1)`,
         display: "block",
         fontWeight: 600,
     },
-    description: {
+    itemDescription: {
         display: "block",
         fontSize: text.xs,
         paddingRight: spacing.sm,
